@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C18CBA041FB04FCB00E4ACF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA031FB04FCB00E4ACF8 /* AppDelegate.swift */; };
+		C18CBA061FB04FCB00E4ACF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA051FB04FCB00E4ACF8 /* ViewController.swift */; };
+		C18CBA091FB04FCB00E4ACF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA071FB04FCB00E4ACF8 /* Main.storyboard */; };
+		C18CBA0B1FB04FCB00E4ACF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA0A1FB04FCB00E4ACF8 /* Assets.xcassets */; };
+		C18CBA0E1FB04FCB00E4ACF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA0C1FB04FCB00E4ACF8 /* LaunchScreen.storyboard */; };
+		C18CBA191FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA181FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift */; };
+		C18CBA241FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA231FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C18CBA151FB04FCB00E4ACF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18CB9F81FB04FCB00E4ACF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18CB9FF1FB04FCB00E4ACF8;
+			remoteInfo = ChickenAndRice;
+		};
+		C18CBA201FB04FCB00E4ACF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C18CB9F81FB04FCB00E4ACF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C18CB9FF1FB04FCB00E4ACF8;
+			remoteInfo = ChickenAndRice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C18CBA001FB04FCB00E4ACF8 /* ChickenAndRice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenAndRice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18CBA031FB04FCB00E4ACF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C18CBA051FB04FCB00E4ACF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C18CBA081FB04FCB00E4ACF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C18CBA0A1FB04FCB00E4ACF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C18CBA0D1FB04FCB00E4ACF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C18CBA0F1FB04FCB00E4ACF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18CBA141FB04FCB00E4ACF8 /* ChickenAndRiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenAndRiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18CBA181FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndRiceTests.swift; sourceTree = "<group>"; };
+		C18CBA1A1FB04FCB00E4ACF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18CBA1F1FB04FCB00E4ACF8 /* ChickenAndRiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenAndRiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C18CBA231FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndRiceUITests.swift; sourceTree = "<group>"; };
+		C18CBA251FB04FCB00E4ACF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C18CB9FD1FB04FCB00E4ACF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18CBA111FB04FCB00E4ACF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18CBA1C1FB04FCB00E4ACF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C18CB9F71FB04FCB00E4ACF8 = {
+			isa = PBXGroup;
+			children = (
+				C18CBA021FB04FCB00E4ACF8 /* ChickenAndRice */,
+				C18CBA171FB04FCB00E4ACF8 /* ChickenAndRiceTests */,
+				C18CBA221FB04FCB00E4ACF8 /* ChickenAndRiceUITests */,
+				C18CBA011FB04FCB00E4ACF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C18CBA011FB04FCB00E4ACF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA001FB04FCB00E4ACF8 /* ChickenAndRice.app */,
+				C18CBA141FB04FCB00E4ACF8 /* ChickenAndRiceTests.xctest */,
+				C18CBA1F1FB04FCB00E4ACF8 /* ChickenAndRiceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C18CBA021FB04FCB00E4ACF8 /* ChickenAndRice */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA031FB04FCB00E4ACF8 /* AppDelegate.swift */,
+				C18CBA051FB04FCB00E4ACF8 /* ViewController.swift */,
+				C18CBA071FB04FCB00E4ACF8 /* Main.storyboard */,
+				C18CBA0A1FB04FCB00E4ACF8 /* Assets.xcassets */,
+				C18CBA0C1FB04FCB00E4ACF8 /* LaunchScreen.storyboard */,
+				C18CBA0F1FB04FCB00E4ACF8 /* Info.plist */,
+			);
+			path = ChickenAndRice;
+			sourceTree = "<group>";
+		};
+		C18CBA171FB04FCB00E4ACF8 /* ChickenAndRiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA181FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift */,
+				C18CBA1A1FB04FCB00E4ACF8 /* Info.plist */,
+			);
+			path = ChickenAndRiceTests;
+			sourceTree = "<group>";
+		};
+		C18CBA221FB04FCB00E4ACF8 /* ChickenAndRiceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA231FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift */,
+				C18CBA251FB04FCB00E4ACF8 /* Info.plist */,
+			);
+			path = ChickenAndRiceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C18CB9FF1FB04FCB00E4ACF8 /* ChickenAndRice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18CBA281FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRice" */;
+			buildPhases = (
+				C18CB9FC1FB04FCB00E4ACF8 /* Sources */,
+				C18CB9FD1FB04FCB00E4ACF8 /* Frameworks */,
+				C18CB9FE1FB04FCB00E4ACF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChickenAndRice;
+			productName = ChickenAndRice;
+			productReference = C18CBA001FB04FCB00E4ACF8 /* ChickenAndRice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C18CBA131FB04FCB00E4ACF8 /* ChickenAndRiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18CBA2B1FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRiceTests" */;
+			buildPhases = (
+				C18CBA101FB04FCB00E4ACF8 /* Sources */,
+				C18CBA111FB04FCB00E4ACF8 /* Frameworks */,
+				C18CBA121FB04FCB00E4ACF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C18CBA161FB04FCB00E4ACF8 /* PBXTargetDependency */,
+			);
+			name = ChickenAndRiceTests;
+			productName = ChickenAndRiceTests;
+			productReference = C18CBA141FB04FCB00E4ACF8 /* ChickenAndRiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C18CBA1E1FB04FCB00E4ACF8 /* ChickenAndRiceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C18CBA2E1FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRiceUITests" */;
+			buildPhases = (
+				C18CBA1B1FB04FCB00E4ACF8 /* Sources */,
+				C18CBA1C1FB04FCB00E4ACF8 /* Frameworks */,
+				C18CBA1D1FB04FCB00E4ACF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C18CBA211FB04FCB00E4ACF8 /* PBXTargetDependency */,
+			);
+			name = ChickenAndRiceUITests;
+			productName = ChickenAndRiceUITests;
+			productReference = C18CBA1F1FB04FCB00E4ACF8 /* ChickenAndRiceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C18CB9F81FB04FCB00E4ACF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Mathew Puryear";
+				TargetAttributes = {
+					C18CB9FF1FB04FCB00E4ACF8 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					C18CBA131FB04FCB00E4ACF8 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C18CB9FF1FB04FCB00E4ACF8;
+					};
+					C18CBA1E1FB04FCB00E4ACF8 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C18CB9FF1FB04FCB00E4ACF8;
+					};
+				};
+			};
+			buildConfigurationList = C18CB9FB1FB04FCB00E4ACF8 /* Build configuration list for PBXProject "ChickenAndRice" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C18CB9F71FB04FCB00E4ACF8;
+			productRefGroup = C18CBA011FB04FCB00E4ACF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C18CB9FF1FB04FCB00E4ACF8 /* ChickenAndRice */,
+				C18CBA131FB04FCB00E4ACF8 /* ChickenAndRiceTests */,
+				C18CBA1E1FB04FCB00E4ACF8 /* ChickenAndRiceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C18CB9FE1FB04FCB00E4ACF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18CBA0E1FB04FCB00E4ACF8 /* LaunchScreen.storyboard in Resources */,
+				C18CBA0B1FB04FCB00E4ACF8 /* Assets.xcassets in Resources */,
+				C18CBA091FB04FCB00E4ACF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18CBA121FB04FCB00E4ACF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18CBA1D1FB04FCB00E4ACF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C18CB9FC1FB04FCB00E4ACF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18CBA061FB04FCB00E4ACF8 /* ViewController.swift in Sources */,
+				C18CBA041FB04FCB00E4ACF8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18CBA101FB04FCB00E4ACF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18CBA191FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C18CBA1B1FB04FCB00E4ACF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C18CBA241FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C18CBA161FB04FCB00E4ACF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18CB9FF1FB04FCB00E4ACF8 /* ChickenAndRice */;
+			targetProxy = C18CBA151FB04FCB00E4ACF8 /* PBXContainerItemProxy */;
+		};
+		C18CBA211FB04FCB00E4ACF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C18CB9FF1FB04FCB00E4ACF8 /* ChickenAndRice */;
+			targetProxy = C18CBA201FB04FCB00E4ACF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C18CBA071FB04FCB00E4ACF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C18CBA081FB04FCB00E4ACF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C18CBA0C1FB04FCB00E4ACF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C18CBA0D1FB04FCB00E4ACF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C18CBA261FB04FCB00E4ACF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C18CBA271FB04FCB00E4ACF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C18CBA291FB04FCB00E4ACF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D8XH5M28Q;
+				INFOPLIST_FILE = ChickenAndRice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChickenAndRice.ChickenAndRice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C18CBA2A1FB04FCB00E4ACF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D8XH5M28Q;
+				INFOPLIST_FILE = ChickenAndRice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChickenAndRice.ChickenAndRice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C18CBA2C1FB04FCB00E4ACF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D8XH5M28Q;
+				INFOPLIST_FILE = ChickenAndRiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChickenAndRice.ChickenAndRiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChickenAndRice.app/ChickenAndRice";
+			};
+			name = Debug;
+		};
+		C18CBA2D1FB04FCB00E4ACF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D8XH5M28Q;
+				INFOPLIST_FILE = ChickenAndRiceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChickenAndRice.ChickenAndRiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChickenAndRice.app/ChickenAndRice";
+			};
+			name = Release;
+		};
+		C18CBA2F1FB04FCB00E4ACF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D8XH5M28Q;
+				INFOPLIST_FILE = ChickenAndRiceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChickenAndRice.ChickenAndRiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChickenAndRice;
+			};
+			name = Debug;
+		};
+		C18CBA301FB04FCB00E4ACF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5D8XH5M28Q;
+				INFOPLIST_FILE = ChickenAndRiceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ChickenAndRice.ChickenAndRiceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChickenAndRice;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C18CB9FB1FB04FCB00E4ACF8 /* Build configuration list for PBXProject "ChickenAndRice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18CBA261FB04FCB00E4ACF8 /* Debug */,
+				C18CBA271FB04FCB00E4ACF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C18CBA281FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18CBA291FB04FCB00E4ACF8 /* Debug */,
+				C18CBA2A1FB04FCB00E4ACF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C18CBA2B1FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18CBA2C1FB04FCB00E4ACF8 /* Debug */,
+				C18CBA2D1FB04FCB00E4ACF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C18CBA2E1FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRiceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C18CBA2F1FB04FCB00E4ACF8 /* Debug */,
+				C18CBA301FB04FCB00E4ACF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C18CB9F81FB04FCB00E4ACF8 /* Project object */;
+}
