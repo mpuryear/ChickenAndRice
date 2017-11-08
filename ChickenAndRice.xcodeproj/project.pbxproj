@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B67534C8F4158CF919D09D6 /* Pods_ChickenAndRiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */; };
+		9E3E2A8C6F7FCDB9AE9AADE0 /* Pods_ChickenAndRiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */; };
+		C106240C1FB1889200500BDC /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = C106240B1FB1889100500BDC /* cat.png */; };
+		C159955E1FB13A3D007E75AC /* TableViewCell_Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */; };
+		C15995601FB13CDB007E75AC /* Model_Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159955F1FB13CDB007E75AC /* Model_Message.swift */; };
+		C1789B231FB39336002ADAAF /* rooster-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = C1789B221FB39336002ADAAF /* rooster-1.wav */; };
 		C18CBA041FB04FCB00E4ACF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA031FB04FCB00E4ACF8 /* AppDelegate.swift */; };
-		C18CBA061FB04FCB00E4ACF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA051FB04FCB00E4ACF8 /* ViewController.swift */; };
+		C18CBA061FB04FCB00E4ACF8 /* ViewController_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA051FB04FCB00E4ACF8 /* ViewController_Login.swift */; };
 		C18CBA091FB04FCB00E4ACF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA071FB04FCB00E4ACF8 /* Main.storyboard */; };
 		C18CBA0B1FB04FCB00E4ACF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA0A1FB04FCB00E4ACF8 /* Assets.xcassets */; };
 		C18CBA0E1FB04FCB00E4ACF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA0C1FB04FCB00E4ACF8 /* LaunchScreen.storyboard */; };
 		C18CBA191FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA181FB04FCB00E4ACF8 /* ChickenAndRiceTests.swift */; };
 		C18CBA241FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA231FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift */; };
+		C18CBA351FB0603300E4ACF8 /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA341FB0603300E4ACF8 /* SocketIOManager.swift */; };
+		C18CBA3A1FB0934C00E4ACF8 /* chicken_and_rice.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA391FB092B400E4ACF8 /* chicken_and_rice.jpeg */; };
+		C18CBA3F1FB0F8D700E4ACF8 /* ViewController_Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA3E1FB0F8D700E4ACF8 /* ViewController_Chat.swift */; };
+		C18CBA421FB0FA7F00E4ACF8 /* Model_User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18CBA411FB0FA7F00E4ACF8 /* Model_User.swift */; };
+		C18CBA441FB1013F00E4ACF8 /* send_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C18CBA431FB1013E00E4ACF8 /* send_icon.png */; };
+		E4F1A076DFBC14BE58AC67D1 /* Pods_ChickenAndRice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC633429BACF41F613E3308A /* Pods_ChickenAndRice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +46,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		089665337AA6046342A3C31C /* Pods-ChickenAndRice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice.debug.xcconfig"; sourceTree = "<group>"; };
+		16106BE72E0E8D7B3D53CBCE /* Pods-ChickenAndRiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C50E19765358C823871A59 /* Pods-ChickenAndRiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96D5571EBFF54366C53A9185 /* Pods-ChickenAndRiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F56DCED9A6F798A053C7587 /* Pods-ChickenAndRiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C106240B1FB1889100500BDC /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell_Chat.swift; sourceTree = "<group>"; };
+		C159955F1FB13CDB007E75AC /* Model_Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_Message.swift; sourceTree = "<group>"; };
+		C1789B221FB39336002ADAAF /* rooster-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "rooster-1.wav"; sourceTree = "<group>"; };
 		C18CBA001FB04FCB00E4ACF8 /* ChickenAndRice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChickenAndRice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18CBA031FB04FCB00E4ACF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C18CBA051FB04FCB00E4ACF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C18CBA051FB04FCB00E4ACF8 /* ViewController_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Login.swift; sourceTree = "<group>"; };
 		C18CBA081FB04FCB00E4ACF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C18CBA0A1FB04FCB00E4ACF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C18CBA0D1FB04FCB00E4ACF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +70,13 @@
 		C18CBA1F1FB04FCB00E4ACF8 /* ChickenAndRiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChickenAndRiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18CBA231FB04FCB00E4ACF8 /* ChickenAndRiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAndRiceUITests.swift; sourceTree = "<group>"; };
 		C18CBA251FB04FCB00E4ACF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C18CBA341FB0603300E4ACF8 /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		C18CBA391FB092B400E4ACF8 /* chicken_and_rice.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicken_and_rice.jpeg; sourceTree = "<group>"; };
+		C18CBA3E1FB0F8D700E4ACF8 /* ViewController_Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_Chat.swift; sourceTree = "<group>"; };
+		C18CBA411FB0FA7F00E4ACF8 /* Model_User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_User.swift; sourceTree = "<group>"; };
+		C18CBA431FB1013E00E4ACF8 /* send_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = send_icon.png; sourceTree = "<group>"; };
+		EC633429BACF41F613E3308A /* Pods_ChickenAndRice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE50BF53752026950BBB8D69 /* Pods-ChickenAndRice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRice.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F1A076DFBC14BE58AC67D1 /* Pods_ChickenAndRice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3E2A8C6F7FCDB9AE9AADE0 /* Pods_ChickenAndRiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,19 +100,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B67534C8F4158CF919D09D6 /* Pods_ChickenAndRiceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48732BDCBDA2AC17A24CB0AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				089665337AA6046342A3C31C /* Pods-ChickenAndRice.debug.xcconfig */,
+				EE50BF53752026950BBB8D69 /* Pods-ChickenAndRice.release.xcconfig */,
+				95C50E19765358C823871A59 /* Pods-ChickenAndRiceTests.debug.xcconfig */,
+				16106BE72E0E8D7B3D53CBCE /* Pods-ChickenAndRiceTests.release.xcconfig */,
+				9F56DCED9A6F798A053C7587 /* Pods-ChickenAndRiceUITests.debug.xcconfig */,
+				96D5571EBFF54366C53A9185 /* Pods-ChickenAndRiceUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5AFB847A1288509F257956F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC633429BACF41F613E3308A /* Pods_ChickenAndRice.framework */,
+				9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */,
+				4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C159955C1FB13A15007E75AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C1789B211FB3931D002ADAAF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				C1789B221FB39336002ADAAF /* rooster-1.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		C18CB9F71FB04FCB00E4ACF8 = {
 			isa = PBXGroup;
 			children = (
+				C1789B211FB3931D002ADAAF /* Sounds */,
+				C18CBA381FB0928900E4ACF8 /* Art */,
 				C18CBA021FB04FCB00E4ACF8 /* ChickenAndRice */,
 				C18CBA171FB04FCB00E4ACF8 /* ChickenAndRiceTests */,
 				C18CBA221FB04FCB00E4ACF8 /* ChickenAndRiceUITests */,
 				C18CBA011FB04FCB00E4ACF8 /* Products */,
+				48732BDCBDA2AC17A24CB0AA /* Pods */,
+				5AFB847A1288509F257956F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +173,11 @@
 		C18CBA021FB04FCB00E4ACF8 /* ChickenAndRice */ = {
 			isa = PBXGroup;
 			children = (
+				C159955C1FB13A15007E75AC /* Views */,
+				C18CBA401FB0FA6A00E4ACF8 /* Models */,
+				C18CBA3B1FB0F4EF00E4ACF8 /* ViewControllers */,
+				C18CBA331FB0602500E4ACF8 /* SocketIO */,
 				C18CBA031FB04FCB00E4ACF8 /* AppDelegate.swift */,
-				C18CBA051FB04FCB00E4ACF8 /* ViewController.swift */,
 				C18CBA071FB04FCB00E4ACF8 /* Main.storyboard */,
 				C18CBA0A1FB04FCB00E4ACF8 /* Assets.xcassets */,
 				C18CBA0C1FB04FCB00E4ACF8 /* LaunchScreen.storyboard */,
@@ -125,6 +204,42 @@
 			path = ChickenAndRiceUITests;
 			sourceTree = "<group>";
 		};
+		C18CBA331FB0602500E4ACF8 /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA341FB0603300E4ACF8 /* SocketIOManager.swift */,
+			);
+			path = SocketIO;
+			sourceTree = "<group>";
+		};
+		C18CBA381FB0928900E4ACF8 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				C106240B1FB1889100500BDC /* cat.png */,
+				C18CBA431FB1013E00E4ACF8 /* send_icon.png */,
+				C18CBA391FB092B400E4ACF8 /* chicken_and_rice.jpeg */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		C18CBA3B1FB0F4EF00E4ACF8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA3E1FB0F8D700E4ACF8 /* ViewController_Chat.swift */,
+				C18CBA051FB04FCB00E4ACF8 /* ViewController_Login.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C18CBA401FB0FA6A00E4ACF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C18CBA411FB0FA7F00E4ACF8 /* Model_User.swift */,
+				C159955F1FB13CDB007E75AC /* Model_Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C18CBA281FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRice" */;
 			buildPhases = (
+				9FF8F2BCEAAFD85C10D5534D /* [CP] Check Pods Manifest.lock */,
 				C18CB9FC1FB04FCB00E4ACF8 /* Sources */,
 				C18CB9FD1FB04FCB00E4ACF8 /* Frameworks */,
 				C18CB9FE1FB04FCB00E4ACF8 /* Resources */,
+				58D8A3AA01CBEC817D897D6B /* [CP] Embed Pods Frameworks */,
+				662091F47B7D174E7CC83750 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +267,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C18CBA2B1FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRiceTests" */;
 			buildPhases = (
+				084659FE5A9CC2E845D7E75E /* [CP] Check Pods Manifest.lock */,
 				C18CBA101FB04FCB00E4ACF8 /* Sources */,
 				C18CBA111FB04FCB00E4ACF8 /* Frameworks */,
 				C18CBA121FB04FCB00E4ACF8 /* Resources */,
+				7398AB03E3B5B485F75CE2CB /* [CP] Embed Pods Frameworks */,
+				09972723CCD0B3D37F3DCB52 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +288,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C18CBA2E1FB04FCB00E4ACF8 /* Build configuration list for PBXNativeTarget "ChickenAndRiceUITests" */;
 			buildPhases = (
+				B84B219C16ED67E05435F41E /* [CP] Check Pods Manifest.lock */,
 				C18CBA1B1FB04FCB00E4ACF8 /* Sources */,
 				C18CBA1C1FB04FCB00E4ACF8 /* Frameworks */,
 				C18CBA1D1FB04FCB00E4ACF8 /* Resources */,
+				9849271629FCF832229EA5D1 /* [CP] Embed Pods Frameworks */,
+				57FF76FFA35D00EC9D8CE0A7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +356,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C106240C1FB1889200500BDC /* cat.png in Resources */,
+				C18CBA441FB1013F00E4ACF8 /* send_icon.png in Resources */,
 				C18CBA0E1FB04FCB00E4ACF8 /* LaunchScreen.storyboard in Resources */,
+				C1789B231FB39336002ADAAF /* rooster-1.wav in Resources */,
 				C18CBA0B1FB04FCB00E4ACF8 /* Assets.xcassets in Resources */,
+				C18CBA3A1FB0934C00E4ACF8 /* chicken_and_rice.jpeg in Resources */,
 				C18CBA091FB04FCB00E4ACF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,12 +382,169 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		084659FE5A9CC2E845D7E75E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChickenAndRiceTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		09972723CCD0B3D37F3DCB52 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57FF76FFA35D00EC9D8CE0A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58D8A3AA01CBEC817D897D6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		662091F47B7D174E7CC83750 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7398AB03E3B5B485F75CE2CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9849271629FCF832229EA5D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FF8F2BCEAAFD85C10D5534D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChickenAndRice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B84B219C16ED67E05435F41E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChickenAndRiceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C18CB9FC1FB04FCB00E4ACF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C18CBA061FB04FCB00E4ACF8 /* ViewController.swift in Sources */,
+				C18CBA061FB04FCB00E4ACF8 /* ViewController_Login.swift in Sources */,
+				C18CBA421FB0FA7F00E4ACF8 /* Model_User.swift in Sources */,
+				C18CBA351FB0603300E4ACF8 /* SocketIOManager.swift in Sources */,
+				C15995601FB13CDB007E75AC /* Model_Message.swift in Sources */,
+				C159955E1FB13A3D007E75AC /* TableViewCell_Chat.swift in Sources */,
+				C18CBA3F1FB0F8D700E4ACF8 /* ViewController_Chat.swift in Sources */,
 				C18CBA041FB04FCB00E4ACF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +709,7 @@
 		};
 		C18CBA291FB04FCB00E4ACF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 089665337AA6046342A3C31C /* Pods-ChickenAndRice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -439,6 +725,7 @@
 		};
 		C18CBA2A1FB04FCB00E4ACF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE50BF53752026950BBB8D69 /* Pods-ChickenAndRice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +741,7 @@
 		};
 		C18CBA2C1FB04FCB00E4ACF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C50E19765358C823871A59 /* Pods-ChickenAndRiceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +759,7 @@
 		};
 		C18CBA2D1FB04FCB00E4ACF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16106BE72E0E8D7B3D53CBCE /* Pods-ChickenAndRiceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +777,7 @@
 		};
 		C18CBA2F1FB04FCB00E4ACF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F56DCED9A6F798A053C7587 /* Pods-ChickenAndRiceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +794,7 @@
 		};
 		C18CBA301FB04FCB00E4ACF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96D5571EBFF54366C53A9185 /* Pods-ChickenAndRiceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
