@@ -45,7 +45,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
 
 
         } else if serverSelectButton.titleLabel?.text == "test2" {
-            serverSelectButton.setTitle("general",for: .normal)
+            serverSelectButton.setTitle("channel1",for: .normal)
             
            SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "chicken")
             SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "channel1")

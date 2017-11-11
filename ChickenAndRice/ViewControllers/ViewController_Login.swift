@@ -107,7 +107,7 @@ class ViewController_Login: UIViewController {
    }
     
     func handleNotConnected() {
-        Toast.showPositiveMessage(message: "Disconnected")
+        Toast.showNegativeMessage(message: "Disconnected")
        SocketIOManager.sharedInstance.reconnect()
     }
     
