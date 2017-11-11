@@ -12,29 +12,108 @@ import SocketIO
 class SocketIOManager : NSObject {
     static let sharedInstance = SocketIOManager()
     
+
+    
+    //198.199.95.209
     var socket = SocketIOClient(socketURL: URL(string: "http://198.199.95.209")!)
+
+    var hasDisconnected :  Bool
     
     override init() {
+        hasDisconnected = true
+        
+
+        
         super.init()
     }
     
     func establishConnection() {
-        socket.connect()
+        socket.forceNew = true
+        socket.reconnects = true
+        if !(socket.status == .connected || socket.status == .connecting || socket.status == .disconnected) {
+            print("CALLING CONNECT")
+            socket.connect()
+        }
+    }
+    
+    func onAny() {
+        socket.onAny({
+            
+            data in
+            
+            let currentEvent = data.event as String
+            if (currentEvent == "disconnected" || currentEvent == "notConnected") {
+                self.hasDisconnected = true
+            }
+            
+            print("\nANy event =====> \(data.event)\n" )
+        })
+    }
+    
+    func reconnect() {
+ 
+        if !(socket.status == .connected || socket.status == .connecting) {
+                print("\n\nCALLING RECONNECT")
+                print("connected: \(SocketIOClientStatus.connected.rawValue)")
+                print("connecting: \(SocketIOClientStatus.connecting.rawValue)")
+                print("notConnected: \(SocketIOClientStatus.notConnected.rawValue)")
+                print("disconnted: \(SocketIOClientStatus.disconnected.rawValue)")
+                print("current socket: \(socket.status.rawValue)")
+                socket.reconnect()
+            }
+        
     }
     
     func closeConnection() {
         socket.disconnect()
     }
     
-    func connectToServer(username: String, password: String, completionHandler: @escaping (_ userList: [[String: AnyObject]]?) -> Void) {
+    
+    func statusChangeHandler(completionHandler: @ escaping (_ status: String) -> Void) {
+        socket.on("statusChange") {
+            data, ack in
+            
+            
+            var status : String
+            
+            let status_code = data[0] as! SocketIO.SocketIOClientStatus
+            switch(status_code) {
+            case .notConnected: status = "notConnected"
+            case .disconnected: status = "disconnected"
+            case .connecting: status = "connecting"
+            case .connected: status = "connected"
+            }
+            
+            
+            completionHandler(status)
+        }
+    }
+    
+    /*
+    func reconnectAttemptHandle(completionHandler: @ escaping() -> Void) {
+        socket.on("reconnectAttempt") {
+            data, ack in
+            completionHandler()
+        }
         
+    }
+    */
+    func disconnectHandler(completionHandler: @escaping () -> Void) {
+    
+        socket.on("disconnect"){
+            data, ack in
+            completionHandler()
+        }
+    }
+    
+    
+    func connectToServer(username: String, password: String) {
         socket.emit("connectUser", username, password)
     }
 
     func loginAuthenticated(username: String, completionHandler: @escaping () -> Void){
-        socket.on("login_authenticated") { (dataArray, socketAck)  -> Void in
-            completionHandler()
-            self.socket.emit("login_authenticated", username)
+        socket.on("client_login_authenticated") { (dataArray, socketAck)  -> Void in
+            completionHandler()  
         }
         
     }
@@ -56,7 +135,37 @@ class SocketIOManager : NSObject {
         }
     }
     
-    func sendMessage(message: String, withUsername username: String) {
-        socket.emit("chatMessage", username, message)
+    func joinServer(username: String, room: String) {
+        socket.emit("joinRoom", username, room)
+    }
+    
+    func leaveServer(username: String, room: String) {
+        socket.emit("leaveRoom", username, room)
+    }
+    
+    func subscribeToServer(username: String, connect_string: String) {
+        socket.emit("subscribeToServer", username, connect_string)
+    }
+    
+    func requestChannelsOfServer(username: String, server_id: String) {
+        socket.emit("getChannels", username, server_id);
+    }
+    
+    func requestSubscribedServers(username: String) {
+        print("\(username) requests")
+        socket.emit("requestSubscribedServers", username)
+    }
+    
+    func getSubscribedServers(completionHandler: @escaping (_ serverList: [String]) -> Void) {
+            
+
+
+
+    }
+    
+    
+    
+    func sendMessage(message: String, withUsername username: String, room: String) {
+        socket.emit("chatMessage", username, message, room)
     }
 }

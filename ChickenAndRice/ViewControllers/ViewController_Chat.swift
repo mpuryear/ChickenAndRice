@@ -15,19 +15,63 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
 
     var player: AVAudioPlayer?
     
+ 
     
     @IBOutlet weak var chatTableView: UITableView!
     
     
     @IBOutlet weak var messageTextField: UITextField!
     
+    @IBOutlet weak var serverSelectButton: UIButton!
+    
+    @IBAction func didTapDisconnect(_ sender: Any) {
+        //SocketIOManager.sharedInstance.closeConnection()
+        handleDisconnected()
+    }
+    
+    
+    @IBAction func didTapChannelSelect(_ sender: Any) {
+       
+        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: "5a06efb2aa678b690467ae85")
+        
+        // leave current server
+        SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: (serverSelectButton.titleLabel?.text)!)
+        
+        
+        if serverSelectButton.titleLabel?.text == "test1" {
+            serverSelectButton.setTitle("test2",for: .normal)
+            SocketIOManager.sharedInstance.subscribeToServer(username:   Model_User.current_user.username, connect_string: "rice")
+              SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "test2")
+
+
+        } else if serverSelectButton.titleLabel?.text == "test2" {
+            serverSelectButton.setTitle("general",for: .normal)
+            
+           SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "chicken")
+            SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "channel1")
+        } else if serverSelectButton.titleLabel?.text == "channel1" {
+            serverSelectButton.setTitle("test1",for: .normal)
+           /*
+            SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "chicken")
+             */
+            SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "test1")
+        }
+
+        // clear messages
+        messageModel.removeAll()
+        chatTableView.reloadData()
+    }
+    
     @IBAction func didTapSend(_ sender: Any) {
         print("didTapSend")
         if let text = messageTextField.text, !text.isEmpty {
-            SocketIOManager.sharedInstance.sendMessage(message: messageTextField.text!, withUsername: Model_User.current_user.username)
+            SocketIOManager.sharedInstance.sendMessage(message: messageTextField.text!, withUsername: Model_User.current_user.username,
+                                                       room: (serverSelectButton.titleLabel?.text)! )
             
             messageTextField.text = "" // clear the text box
         }
+        
+           SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
     }
     
     func playMessageNotification() {
@@ -60,7 +104,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
                 currentMessage.message = message
             }
             
-            print("message appended: " + currentMessage.message)
+            print("\nmessage appended\n")
             self.messageModel.append(currentMessage)
             self.chatTableView.reloadData()
         
@@ -75,6 +119,45 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             }
         })
     }
+
+    func handleNotConnected() {
+       self.performSegue(withIdentifier: "unwindToLogin", sender: nil)
+    }
+    
+    func handleDisconnected() {
+        self.performSegue(withIdentifier: "unwindToLogin", sender: nil)
+        SocketIOManager.sharedInstance.closeConnection()
+    }
+    
+    func handleConnecting() {
+        
+    }
+    
+    func handleConnected() {
+        
+    }
+    
+    func establishStatusChangeHandling() {
+        SocketIOManager.sharedInstance.statusChangeHandler(completionHandler: {
+            (status) ->  Void in DispatchQueue.main.async{
+                () -> Void in
+                
+                let response = status as String
+                print("\n\n\n CHAT_VC: \(response)")
+                switch(response) {
+                case "notConnected": self.handleNotConnected()
+                case "disconnected": self.handleDisconnected()
+                case "connecting": self.handleConnecting()
+                case "connected": self.handleConnected()
+                default: break
+                }
+                
+                
+                
+                
+            }});
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +170,8 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         chatTableView.separatorStyle = .none   
         
         establishMessageHandling()
+   //     establishStatusChangeHandling()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -137,9 +222,6 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         cell.usernameTextView?.attributedText = attribString
         cell.messageTextView?.text = currentMessage.message
         
-        
-        
-        print("dateTime: \(cell.dateTextView.text)")
         return cell
     }
     

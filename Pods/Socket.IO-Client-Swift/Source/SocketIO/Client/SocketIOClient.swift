@@ -405,6 +405,7 @@ open class SocketIOClient : NSObject, SocketIOClientSpec, SocketEngineClient, So
     private func _engineDidClose(reason: String) {
         waitingPackets.removeAll()
 
+        
         if status != .disconnected {
             status = .notConnected
         }
@@ -653,6 +654,7 @@ open class SocketIOClient : NSObject, SocketIOClientSpec, SocketEngineClient, So
     open func reconnect() {
         guard !reconnecting else { return }
 
+        status = .notConnected
         engine?.disconnect(reason: "manual reconnect")
     }
 
