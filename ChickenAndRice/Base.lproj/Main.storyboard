@@ -80,14 +80,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oHk-u1-0C9">
-                                <rect key="frame" x="20.333333333333343" y="139" width="374.33333333333326" height="537"/>
+                                <rect key="frame" x="20.333333333333371" y="139" width="609" height="537"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="121" id="trp-od-kxw" customClass="TableViewCell_Chat" customModule="ChickenAndRice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="609.33333333333337" height="121"/>
+                                        <rect key="frame" x="0.0" y="28" width="373.66666666666663" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="trp-od-kxw" id="Ufj-W3-G2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="609.33333333333337" height="120.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373.66666666666663" height="120.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" scrollEnabled="NO" editable="NO" text="USERNAME" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-Kb-NcH">
@@ -152,7 +152,7 @@
                                 <sections/>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-Jk-4kO">
-                                <rect key="frame" x="20.333333333333343" y="684" width="374.33333333333326" height="32"/>
+                                <rect key="frame" x="20.333333333333371" y="684" width="609" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="27R-xP-aSG"/>
                                     <constraint firstAttribute="height" constant="32" id="7xq-lU-PLI"/>
@@ -162,7 +162,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viV-KQ-W6I">
-                                <rect key="frame" x="362.66666666666663" y="684" width="32" height="32"/>
+                                <rect key="frame" x="362.33333333333331" y="684" width="266.99999999999994" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="viV-KQ-W6I" secondAttribute="height" multiplier="32:32" id="2pg-Pc-dHJ"/>
                                 </constraints>
@@ -172,14 +172,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It2-Fk-4Bi" userLabel="Channel Select Button">
-                                <rect key="frame" x="158.66666666666669" y="86" width="52" height="30"/>
+                                <rect key="frame" x="158.33333333333337" y="86" width="287" height="30"/>
                                 <state key="normal" title="channel1"/>
                                 <connections>
                                     <action selector="didTapChannelSelect:" destination="YvE-p8-3fP" eventType="touchUpInside" id="UBd-17-F8c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imz-uM-mGe">
-                                <rect key="frame" x="281.66666666666663" y="86" width="46" height="30"/>
+                                <rect key="frame" x="516.33333333333337" y="86" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="LBk-fT-iyk"/>
                                 </constraints>
@@ -189,7 +189,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9If-gP-Oky" userLabel="Server Select Button">
-                                <rect key="frame" x="0.3333333333333357" y="86" width="108" height="30"/>
+                                <rect key="frame" x="0.33333333333334281" y="86" width="107" height="30"/>
                                 <state key="normal" title="general"/>
                             </button>
                         </subviews>
