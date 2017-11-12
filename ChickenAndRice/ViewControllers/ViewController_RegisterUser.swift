@@ -11,10 +11,38 @@ import UIKit
 class ViewController_RegisterUser: UIViewController {
 
     
+    @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBAction func didTapRegister(_ sender: Any) {
+                
+        // check for username/password is empty and display an alert if so
+        if usernameTextField!.text == "" || passwordTextField!.text == "" {
+            // TODO add UIAlertController, see viewController_Login
+        } else {
+            SocketIOManager.sharedInstance.attemptRegisterUser(username: usernameTextField.text!, password: passwordTextField.text!)
+        }
+        
+    }
+    
+    func registerUserHandler() {
+        SocketIOManager.sharedInstance.username_taken(completionHandler: {
+           () -> Void in
+            // TODO add UIAlertController for taken username, see viewController_Login
+        })
+        
+        SocketIOManager.sharedInstance.user_created(completionHandler: {
+            () -> Void in
+            // our username and password were valid, so simply go back to the login page
+          self.performSegue(withIdentifier: "unwindRegisterToLogin", sender: nil)
+        })
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        registerUserHandler()
         
         // Do any additional setup after loading the view.
     }

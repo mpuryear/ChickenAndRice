@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController_Login: UIViewController {
 
+    static var hasLoaded : Bool = false
+    
     class Toast
     {
         class private func showAlert(backgroundColor:UIColor, textColor:UIColor, message:String)
@@ -81,7 +83,6 @@ class ViewController_Login: UIViewController {
         Model_User.current_user.username = usernameTextField.text!
         Model_User.current_user.password = passwordTextField.text!
         connectToServer()
-
     }
     
     func connectToServer() {
@@ -107,12 +108,14 @@ class ViewController_Login: UIViewController {
     
     func handleDisconnected() {
         //reconnect
-    SocketIOManager.sharedInstance.reconnect()
+        print("handleDisconnect_Login")
+        SocketIOManager.sharedInstance.reconnect()
    }
     
     func handleNotConnected() {
+        print("handleReconnect_Login")
         Toast.showNegativeMessage(message: "Disconnected")
-       SocketIOManager.sharedInstance.reconnect()
+        SocketIOManager.sharedInstance.reconnect()
     }
     
     func establishStatusChangeHandling() {
@@ -159,16 +162,16 @@ class ViewController_Login: UIViewController {
  
         
         print("\nViewdidLoad\n")
+        if !ViewController_Login.hasLoaded {
         SocketIOManager.sharedInstance.onAny()
         establishStatusChangeHandling() 
         authenticateLogin()
-        
-        
         establishInvalidLoginHandling()
         
         SocketIOManager.sharedInstance.establishConnection()
-
-
+        }
+        
+            ViewController_Login.hasLoaded = true
  
         // Do any additional setup after loading the view, typically from a nib.
    

@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var messageModel : [Model_Message] = [Model_Message]()
+    static var hasLoaded : Bool =  false
 
     var player: AVAudioPlayer?
     
@@ -27,6 +28,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func didTapDisconnect(_ sender: Any) {
         //SocketIOManager.sharedInstance.closeConnection()
         handleDisconnected()
+        SocketIOManager.sharedInstance.closeConnection()
     }
     
     
@@ -84,6 +86,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func establishMessageHandling() {
+        print("Establishing message handling")
         SocketIOManager.sharedInstance.getChatMessage(completionHandler: { (messageInfo) -> Void in DispatchQueue.main.async{
             () -> Void in
             
@@ -108,7 +111,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             self.messageModel.append(currentMessage)
             self.chatTableView.reloadData()
         
-            
+            print("played sound")
             self.playMessageNotification()
             
             // scroll to bottom of the tableview
@@ -121,12 +124,14 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func handleNotConnected() {
-       self.performSegue(withIdentifier: "unwindToLogin", sender: nil)
+       self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+     //   SocketIOManager.sharedInstance.reconnect()
     }
     
     func handleDisconnected() {
-        self.performSegue(withIdentifier: "unwindToLogin", sender: nil)
-        SocketIOManager.sharedInstance.closeConnection()
+        self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+     //   SocketIOManager.sharedInstance.reconnect()
+       
     }
     
     func handleConnecting() {
@@ -162,6 +167,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
         chatTableView.delegate = self
         chatTableView.dataSource = self
 
@@ -169,14 +175,23 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         chatTableView.estimatedRowHeight = 44
         chatTableView.separatorStyle = .none   
         
-        establishMessageHandling()
-   //     establishStatusChangeHandling()
+        print("View did Load")
+
         
+        establishMessageHandling()
+        establishStatusChangeHandling()
+       
+        ViewController_Chat.hasLoaded = true
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+            
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
 

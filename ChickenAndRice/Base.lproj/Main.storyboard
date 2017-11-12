@@ -23,7 +23,7 @@
                                 <rect key="frame" x="112" y="247" width="150" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-ME-wxc">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-ME-wxc">
                                 <rect key="frame" x="139" y="472" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -39,7 +39,7 @@
                                     <action selector="didReleaseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfm-ot-tjA"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="04H-Jc-z45">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="04H-Jc-z45">
                                 <rect key="frame" x="139" y="411" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -110,6 +110,7 @@
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="[11/8/2017, 3:32:18 AM]" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-OM-MQe">
                                                     <rect key="frame" x="8" y="24" width="97" height="26"/>
@@ -222,7 +223,7 @@
                         <outlet property="chatTableView" destination="oHk-u1-0C9" id="cFt-SW-yFw"/>
                         <outlet property="messageTextField" destination="f3h-Jk-4kO" id="7Tt-0l-aJ1"/>
                         <outlet property="serverSelectButton" destination="It2-Fk-4Bi" id="xhV-oU-EyI"/>
-                        <segue destination="ELN-Td-vzb" kind="unwind" identifier="unwindToLogin" unwindAction="unwindToLoginWithSender:" id="uO2-rn-RkU"/>
+                        <segue destination="ELN-Td-vzb" kind="unwind" identifier="unwindChatToLogin" unwindAction="unwindToLoginWithSender:" id="uO2-rn-RkU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fb8-EG-uzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,20 +231,50 @@
             </objects>
             <point key="canvasLocation" x="1859" y="-598"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Register User-->
         <scene sceneID="6i7-lm-mqE">
             <objects>
-                <viewController id="5sp-K5-xOP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" id="5sp-K5-xOP" customClass="ViewController_RegisterUser" customModule="ChickenAndRice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s4y-H0-BAP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqj-sX-7Cw">
+                                <rect key="frame" x="159" y="477" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="didTapRegister:" destination="5sp-K5-xOP" eventType="touchUpInside" id="4iQ-KV-VQC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4pZ-XZ-09z">
+                                <rect key="frame" x="159" y="353" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yoy-JM-bRf">
+                                <rect key="frame" x="159" y="413" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ApB-nm-hMD"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Yoy-JM-bRf" id="lJC-Ws-Z63"/>
+                        <outlet property="usernameTextField" destination="4pZ-XZ-09z" id="0SY-dZ-Xxc"/>
+                        <segue destination="RPJ-IP-AzV" kind="unwind" identifier="unwindRegisterToLogin" unwindAction="unwindToLoginWithSender:" id="T9P-VH-aaC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82z-6A-jHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="RPJ-IP-AzV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="454"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="453.26086956521743"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dyP-SI-GMA">

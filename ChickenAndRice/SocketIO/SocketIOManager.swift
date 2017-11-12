@@ -44,9 +44,11 @@ class SocketIOManager : NSObject {
             let currentEvent = data.event as String
             if (currentEvent == "disconnected" || currentEvent == "notConnected") {
                 self.hasDisconnected = true
-            }
+            } 
             
             print("\nANy event =====> \(data.event)\n" )
+            
+            
         })
     }
     
@@ -162,6 +164,13 @@ class SocketIOManager : NSObject {
             completionHandler()
         }
         
+    }
+    
+    func user_created(completionHandler: @escaping () -> Void) {
+        socket.on("user_created") {
+            data, ack in
+            completionHandler()
+        }
     }
     
     func requestSubscribedServers(username: String) {
