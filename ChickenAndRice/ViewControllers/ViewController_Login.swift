@@ -71,6 +71,10 @@ class ViewController_Login: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBAction func didTapRegister(_ sender: Any) {
+        self.performSegue(withIdentifier: "Segue_LoginToRegisterUser", sender: self)
+    }
+    
     @IBAction func didReleaseButton(_ sender: Any) {
         print("Connect Button Pressed")
        
@@ -159,10 +163,11 @@ class ViewController_Login: UIViewController {
         establishStatusChangeHandling() 
         authenticateLogin()
         
+        
+        establishInvalidLoginHandling()
+        
         SocketIOManager.sharedInstance.establishConnection()
 
-       // establishInvalidLoginHandling()
-  
 
  
         // Do any additional setup after loading the view, typically from a nib.

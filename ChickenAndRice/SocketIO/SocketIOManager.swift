@@ -151,6 +151,19 @@ class SocketIOManager : NSObject {
         socket.emit("getChannels", username, server_id);
     }
     
+    func attemptRegisterUser(username: String, password: String) {
+        socket.emit("registerUser", username, password);
+    }
+    
+    func username_taken(completionHandler: @ escaping() -> Void) {
+        socket.on("username_taken") {
+            data, ack in
+            
+            completionHandler()
+        }
+        
+    }
+    
     func requestSubscribedServers(username: String) {
         print("\(username) requests")
         socket.emit("requestSubscribedServers", username)
