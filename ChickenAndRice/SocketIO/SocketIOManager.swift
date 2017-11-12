@@ -153,6 +153,23 @@ class SocketIOManager : NSObject {
         socket.emit("getChannels", username, server_id);
     }
     
+    func getChannel(completionHandler: @escaping (_ channel: String) -> Void) {
+        socket.on("channel") { (dataArray, socketAck) -> Void in
+            
+            print("dataArray: \(dataArray)")
+            
+            var name = ""
+            
+            let data = dataArray as! [[String : Any]]
+            
+            name = data[0]["name"] as! String
+            
+            completionHandler(name)
+ 
+        }
+        
+    }
+    
     func attemptRegisterUser(username: String, password: String) {
         socket.emit("registerUser", username, password);
     }

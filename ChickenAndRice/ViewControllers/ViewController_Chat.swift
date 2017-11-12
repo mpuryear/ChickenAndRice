@@ -14,9 +14,11 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     var messageModel : [Model_Message] = [Model_Message]()
     static var hasLoaded : Bool =  false
 
-    var player: AVAudioPlayer?
+    var list = ["1", "2", "3"]
+    var responseChannels : [String] = []
     
- 
+    
+    var player: AVAudioPlayer?
     
     @IBOutlet weak var chatTableView: UITableView!
     
@@ -25,6 +27,9 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var serverSelectButton: UIButton!
     
+    @IBAction func didTapServerSelect(_ sender: Any) {
+
+    }
     @IBAction func didTapDisconnect(_ sender: Any) {
         //SocketIOManager.sharedInstance.closeConnection()
         handleDisconnected()
@@ -34,9 +39,10 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func didTapChannelSelect(_ sender: Any) {
        
-        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: "5a06efb2aa678b690467ae85")
+
         
         // leave current server
+        /*
         SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: (serverSelectButton.titleLabel?.text)!)
         
         
@@ -62,13 +68,16 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         // clear messages
         messageModel.removeAll()
         chatTableView.reloadData()
+        */
+        self.performSegue(withIdentifier: "Segue_ChatToChannel", sender: self)
+        
     }
     
     @IBAction func didTapSend(_ sender: Any) {
         print("didTapSend")
         if let text = messageTextField.text, !text.isEmpty {
             SocketIOManager.sharedInstance.sendMessage(message: messageTextField.text!, withUsername: Model_User.current_user.username,
-                                                       room: (serverSelectButton.titleLabel?.text)! )
+                                                       room: Model_Channel.current_channel.name )
             
             messageTextField.text = "" // clear the text box
         }
@@ -83,6 +92,14 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             // Play
             AudioServicesPlaySystemSound(mySound);
         }
+    }
+    
+    func establishChannelHandling() {
+        SocketIOManager.sharedInstance.getChannel(completionHandler: {
+            (results) -> Void in DispatchQueue.main.async {
+                self.responseChannels.append(results)
+            }
+        })
     }
     
     func establishMessageHandling() {
@@ -124,12 +141,18 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func handleNotConnected() {
-       self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+       //self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
      //   SocketIOManager.sharedInstance.reconnect()
     }
     
     func handleDisconnected() {
-        self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+       // self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
      //   SocketIOManager.sharedInstance.reconnect()
        
     }
@@ -167,23 +190,36 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        navigationItem.hidesBackButton = true
         chatTableView.delegate = self
         chatTableView.dataSource = self
-
+        
         chatTableView.rowHeight = UITableViewAutomaticDimension
         chatTableView.estimatedRowHeight = 44
         chatTableView.separatorStyle = .none   
-        
+
+    
         print("View did Load")
 
         
         establishMessageHandling()
         establishStatusChangeHandling()
+        establishChannelHandling()
        
+        // get channels for our default server
+        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: "5a06efb2aa678b690467ae85")
+        
         ViewController_Chat.hasLoaded = true
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("view appeared: chat : model channel current name: \(Model_Channel.current_channel.name)")
+//        serverSelectButton.titleLabel!.text = Model_Channel.current_channel.name
+        serverSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
+
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
             
     }
@@ -205,7 +241,16 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     }
     */
 
-  
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Segue_ChatToChannel" {
+            if let viewController = segue.destination as? ViewController_ChannelSelect {
+                if(responseChannels.count > 0){
+                    viewController.channels = responseChannels
+                }
+            }
+        }
+    }
     
     
    func numberOfSections(in tableView: UITableView) -> Int {
@@ -239,5 +284,5 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
         return cell
     }
-    
+ 
 }

@@ -158,7 +158,7 @@ class ViewController_Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       print("View did Appear: Login")
  
         
         print("\nViewdidLoad\n")
@@ -179,6 +179,7 @@ class ViewController_Login: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         Model_User.current_user.authenticated = false
+        
     }
 
     override func didReceiveMemoryWarning() {

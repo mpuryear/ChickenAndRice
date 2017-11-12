@@ -79,15 +79,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oHk-u1-0C9">
-                                <rect key="frame" x="20.333333333333371" y="139" width="609" height="537"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oHk-u1-0C9">
+                                <rect key="frame" x="20" y="209" width="374" height="467"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="121" id="trp-od-kxw" customClass="TableViewCell_Chat" customModule="ChickenAndRice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="373.66666666666663" height="121"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="trp-od-kxw" id="Ufj-W3-G2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="373.66666666666663" height="120.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="120.66666666666667"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" scrollEnabled="NO" editable="NO" text="USERNAME" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-Kb-NcH">
@@ -174,7 +174,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It2-Fk-4Bi" userLabel="Channel Select Button">
                                 <rect key="frame" x="158.33333333333337" y="86" width="287" height="30"/>
-                                <state key="normal" title="channel1"/>
+                                <state key="normal" title="General"/>
                                 <connections>
                                     <action selector="didTapChannelSelect:" destination="YvE-p8-3fP" eventType="touchUpInside" id="UBd-17-F8c"/>
                                 </connections>
@@ -190,8 +190,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9If-gP-Oky" userLabel="Server Select Button">
-                                <rect key="frame" x="0.33333333333334281" y="86" width="107" height="30"/>
+                                <rect key="frame" x="0.33333333333334281" y="86" width="108" height="30"/>
                                 <state key="normal" title="general"/>
+                                <connections>
+                                    <action selector="didTapServerSelect:" destination="YvE-p8-3fP" eventType="touchUpInside" id="yVA-Yi-0DG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,12 +227,60 @@
                         <outlet property="messageTextField" destination="f3h-Jk-4kO" id="7Tt-0l-aJ1"/>
                         <outlet property="serverSelectButton" destination="It2-Fk-4Bi" id="xhV-oU-EyI"/>
                         <segue destination="ELN-Td-vzb" kind="unwind" identifier="unwindChatToLogin" unwindAction="unwindToLoginWithSender:" id="uO2-rn-RkU"/>
+                        <segue destination="jlr-fe-0vW" kind="show" identifier="Segue_ChatToChannel" id="0lI-Qr-Fvd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fb8-EG-uzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ELN-Td-vzb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1859" y="-598"/>
+            <point key="canvasLocation" x="1857.9710144927537" y="-598.36956521739137"/>
+        </scene>
+        <!--View Controller Channel Select-->
+        <scene sceneID="g9q-Ia-kWG">
+            <objects>
+                <viewController id="jlr-fe-0vW" customClass="ViewController_ChannelSelect" customModule="ChickenAndRice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l5i-Jy-0yE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="20L-tB-qOR">
+                                <rect key="frame" x="20" y="108" width="374" height="538"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChannelCell" id="aCb-JC-UA1" customClass="TableViewCell_Channel" customModule="ChickenAndRice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCb-JC-UA1" id="Np3-hG-Evi">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChannelName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m5-0s-AkS">
+                                                    <rect key="frame" x="8" y="8" width="358" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="channelName" destination="1m5-0s-AkS" id="63y-Wm-8jt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="RsN-qL-ifC"/>
+                    </view>
+                    <connections>
+                        <outlet property="channelTableView" destination="20L-tB-qOR" id="YVZ-LD-pec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewc-55-9E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730.434782608696" y="-681.52173913043487"/>
         </scene>
         <!--View Controller Register User-->
         <scene sceneID="6i7-lm-mqE">
