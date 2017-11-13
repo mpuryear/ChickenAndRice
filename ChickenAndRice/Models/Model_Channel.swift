@@ -19,5 +19,11 @@ class Model_Channel : NSObject {
         super.init()
     }
     
+    init(name: String, id: String) {
+        self.name = name
+        self._id = id
+        super.init()
+    }
+    
     
 }

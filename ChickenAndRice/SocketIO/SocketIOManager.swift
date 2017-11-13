@@ -145,26 +145,62 @@ class SocketIOManager : NSObject {
         socket.emit("leaveRoom", username, room)
     }
     
+    func createServer(username: String, servername: String) {
+        socket.emit("createServer", username, servername)
+    }
+    
+    func serverCreated(completionHandler: @escaping (_ results: Model_Server) -> Void) {
+        socket.on("serverCreated") {
+            data, ack in
+            
+            let t = data[0] as! [String: AnyObject]
+            let name = t["name"] as! String
+            let id = t["_id"] as! String
+            let link = t["connection_string"] as! String
+            let server = Model_Server(name: name, id: id, link: link)
+            completionHandler(server)
+        }
+    }
+    
     func subscribeToServer(username: String, connect_string: String) {
         socket.emit("subscribeToServer", username, connect_string)
+    }
+    
+    func serverSubscribeSuccess(completionHandler: @escaping (_ server: Model_Server) -> Void) {
+        socket.on("joinedServer") {
+            data, Ack in
+            
+            let t = data[0] as! [String: AnyObject]
+            let name = t["name"] as! String
+            let id = t["_id"] as! String
+            let string = t["connection_string"] as! String
+            let server = Model_Server(name: name, id: id, link: string)
+            completionHandler(server)
+        }
     }
     
     func requestChannelsOfServer(username: String, server_id: String) {
         socket.emit("getChannels", username, server_id);
     }
     
-    func getChannel(completionHandler: @escaping (_ channel: String) -> Void) {
+    func getChannel(completionHandler: @escaping (_ channel: [Model_Channel]) -> Void) {
         socket.on("channel") { (dataArray, socketAck) -> Void in
             
             print("dataArray: \(dataArray)")
             
-            var name = ""
+            var channels : [Model_Channel] = []
             
-            let data = dataArray as! [[String : Any]]
+            let data = dataArray[0] as! [[String : AnyObject]]
+            for i in data {
+                var name = ""
+                var _id = ""
+                name = i["name"] as! String
+                _id = i["_id"] as! String
             
-            name = data[0]["name"] as! String
-            
-            completionHandler(name)
+                let currentChannel = Model_Channel(name: name, id: _id)
+                channels.append(currentChannel)
+            }
+            completionHandler(channels)
  
         }
         
@@ -195,11 +231,23 @@ class SocketIOManager : NSObject {
         socket.emit("requestSubscribedServers", username)
     }
     
-    func getSubscribedServers(completionHandler: @escaping (_ serverList: [String]) -> Void) {
+    func getServer(completionHandler: @escaping (_ server: [Model_Server]) -> Void){
+        socket.on("server") {
+            dataArray, ack in
             
-
-
-
+            var results : [Model_Server] = []
+            
+            let data = dataArray[0] as! [[String : AnyObject]]
+            for servers in data {
+            let name = servers["name"] as! String
+            let _id = servers["_id"] as! String
+            let link = servers["connection_string"] as! String
+             
+            let currentServer = Model_Server(name: name, id: _id, link: link)
+                results.append(currentServer)
+            }
+            completionHandler(results)
+        }
     }
     
     

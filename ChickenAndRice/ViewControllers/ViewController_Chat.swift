@@ -14,8 +14,9 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     var messageModel : [Model_Message] = [Model_Message]()
     static var hasLoaded : Bool =  false
 
-    var list = ["1", "2", "3"]
-    var responseChannels : [String] = []
+    
+    var responseChannels : [Model_Channel] = []
+    var responseServers : [Model_Server] = []
     
     
     var player: AVAudioPlayer?
@@ -25,10 +26,15 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var messageTextField: UITextField!
     
+  
+    @IBOutlet weak var shareableStringTextView: UITextView!
+    
     @IBOutlet weak var serverSelectButton: UIButton!
     
+    @IBOutlet weak var channelSelectButton: UIButton!
+    
     @IBAction func didTapServerSelect(_ sender: Any) {
-
+        self.performSegue(withIdentifier: "Segue_ChatToServer", sender: self)
     }
     @IBAction func didTapDisconnect(_ sender: Any) {
         //SocketIOManager.sharedInstance.closeConnection()
@@ -38,37 +44,11 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     
     @IBAction func didTapChannelSelect(_ sender: Any) {
-       
-
-        
-        // leave current server
-        /*
-        SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: (serverSelectButton.titleLabel?.text)!)
-        
-        
-        if serverSelectButton.titleLabel?.text == "test1" {
-            serverSelectButton.setTitle("test2",for: .normal)
-            SocketIOManager.sharedInstance.subscribeToServer(username:   Model_User.current_user.username, connect_string: "rice")
-              SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "test2")
-
-
-        } else if serverSelectButton.titleLabel?.text == "test2" {
-            serverSelectButton.setTitle("channel1",for: .normal)
-            
-           SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "chicken")
-            SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "channel1")
-        } else if serverSelectButton.titleLabel?.text == "channel1" {
-            serverSelectButton.setTitle("test1",for: .normal)
-           /*
-            SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "chicken")
-             */
-            SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: "test1")
-        }
 
         // clear messages
         messageModel.removeAll()
         chatTableView.reloadData()
-        */
+        
         self.performSegue(withIdentifier: "Segue_ChatToChannel", sender: self)
         
     }
@@ -81,8 +61,9 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             
             messageTextField.text = "" // clear the text box
         }
-        
+        /*
            SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
+ */
     }
     
     func playMessageNotification() {
@@ -97,7 +78,15 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     func establishChannelHandling() {
         SocketIOManager.sharedInstance.getChannel(completionHandler: {
             (results) -> Void in DispatchQueue.main.async {
-                self.responseChannels.append(results)
+                self.responseChannels = results
+            }
+        })
+    }
+    
+    func establishServerHandling() {
+        SocketIOManager.sharedInstance.getServer(completionHandler: {
+            (results) -> Void in DispatchQueue.main.async {
+                self.responseServers = results
             }
         })
     }
@@ -205,9 +194,14 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         establishMessageHandling()
         establishStatusChangeHandling()
         establishChannelHandling()
+        establishServerHandling()
+        
+        SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "general")
+        
+        SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
        
         // get channels for our default server
-        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: "5a06efb2aa678b690467ae85")
+        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
         
         ViewController_Chat.hasLoaded = true
     }
@@ -215,9 +209,12 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidAppear(_ animated: Bool) {
         print("view appeared: chat : model channel current name: \(Model_Channel.current_channel.name)")
-//        serverSelectButton.titleLabel!.text = Model_Channel.current_channel.name
-        serverSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
+    
+        serverSelectButton.setTitle(Model_Server.current_server.name, for: .normal)
+        channelSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
 
+            shareableStringTextView.text = Model_Server.current_server.shareableLink
+        
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -247,6 +244,12 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             if let viewController = segue.destination as? ViewController_ChannelSelect {
                 if(responseChannels.count > 0){
                     viewController.channels = responseChannels
+                }
+            }
+        }else if segue.identifier == "Segue_ChatToServer" {
+            if let viewController = segue.destination as? ViewController_ServerSelect {
+                if(responseServers.count > 0) {
+                    viewController.servers = responseServers
                 }
             }
         }

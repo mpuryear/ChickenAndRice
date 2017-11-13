@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UITableViewDelegate {
 
-    var channels : [String] = []
+    var channels : [Model_Channel] = []
     
     @IBOutlet weak var channelTableView: UITableView!
     
@@ -84,7 +84,7 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         // Color the user name if it is the current user
     
         // add our text to our views
-        cell.channelName.text = currentChannel
+        cell.channelName.text = currentChannel.name
         
         return cell
     }
