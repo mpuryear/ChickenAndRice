@@ -14,6 +14,15 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
     
     @IBOutlet weak var channelTableView: UITableView!
     
+    @IBOutlet weak var newChannelTextField: UITextField!
+    
+    @IBAction func didTapCreateChannel(_ sender: Any) {
+        if newChannelTextField.text != "" {
+        SocketIOManager.sharedInstance.createChanne(username: Model_User.current_user.username, channel_name: newChannelTextField.text!, server_id: Model_Server.current_server._id)
+        } else {
+            // TODO alert, field cannot be empty
+        }
+    }
     var selectedLabel : String = ""
     
     override func viewDidLoad() {
@@ -24,6 +33,20 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         channelTableView.dataSource = self
  
         
+        SocketIOManager.sharedInstance.channelCreated(completionHandler: {
+            (results) -> Void in
+            self.appendToData(channel: results)
+            self.channelTableView.reloadData()
+        });
+        
+        
+        
+        SocketIOManager.sharedInstance.failedToCreateChannel(completionHandler: { () -> Void in
+            
+            // TODO Alert user that this channel couldnt be created via UIALert
+            // see login view controller for example
+            
+        });
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +56,15 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
     }
     
  
+    
+    func appendToData(channel: Model_Channel) {
+        for c in channels {
+            if c._id == channel._id {
+                return
+            }
+        }
+        channels.append(channel)
+    }
     
 
     /*

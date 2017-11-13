@@ -17,7 +17,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     var responseChannels : [Model_Channel] = []
     var responseServers : [Model_Server] = []
-    
+    var clickedChannels : Bool = false
     
     var player: AVAudioPlayer?
     
@@ -49,8 +49,8 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         messageModel.removeAll()
         chatTableView.reloadData()
         
-        self.performSegue(withIdentifier: "Segue_ChatToChannel", sender: self)
-        
+        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
+       clickedChannels = true
     }
     
     @IBAction func didTapSend(_ sender: Any) {
@@ -61,9 +61,6 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             
             messageTextField.text = "" // clear the text box
         }
-        /*
-           SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
- */
     }
     
     func playMessageNotification() {
@@ -79,6 +76,10 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         SocketIOManager.sharedInstance.getChannel(completionHandler: {
             (results) -> Void in DispatchQueue.main.async {
                 self.responseChannels = results
+                if self.clickedChannels {
+                self.performSegue(withIdentifier: "Segue_ChatToChannel", sender: self)
+                }
+                self.clickedChannels = false
             }
         })
     }

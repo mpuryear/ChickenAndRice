@@ -149,6 +149,10 @@ class SocketIOManager : NSObject {
         socket.emit("createServer", username, servername)
     }
     
+    func createChanne(username: String, channel_name: String, server_id: String) {
+        socket.emit("createChannel", username, channel_name, server_id)
+    }
+    
     func serverCreated(completionHandler: @escaping (_ results: Model_Server) -> Void) {
         socket.on("serverCreated") {
             data, ack in
@@ -157,8 +161,21 @@ class SocketIOManager : NSObject {
             let name = t["name"] as! String
             let id = t["_id"] as! String
             let link = t["connection_string"] as! String
-            let server = Model_Server(name: name, id: id, link: link)
+            let default_channel = t["channel_ids"] as! [String]
+            let server = Model_Server(name: name, id: id, link: link, default_channel: default_channel[0])
             completionHandler(server)
+        }
+    }
+    
+    func channelCreated(completionHandler: @escaping (_ results: Model_Channel) -> Void) {
+        socket.on("channelCreated") {
+            data, ack in
+            
+            let t = data[0] as! [String: AnyObject]
+            let name = t["name"] as! String
+            let id = t["_id"] as! String
+            let channel = Model_Channel(name: name, id: id)
+            completionHandler(channel)
         }
     }
     
@@ -174,7 +191,8 @@ class SocketIOManager : NSObject {
             let name = t["name"] as! String
             let id = t["_id"] as! String
             let string = t["connection_string"] as! String
-            let server = Model_Server(name: name, id: id, link: string)
+            let default_channel = t["channel_ids"] as! [String]
+            let server = Model_Server(name: name, id: id, link: string, default_channel: default_channel[0])
             completionHandler(server)
         }
     }
@@ -242,15 +260,35 @@ class SocketIOManager : NSObject {
             let name = servers["name"] as! String
             let _id = servers["_id"] as! String
             let link = servers["connection_string"] as! String
-             
-            let currentServer = Model_Server(name: name, id: _id, link: link)
+            let default_channel = servers["channel_ids"] as! [String]
+                
+            let currentServer = Model_Server(name: name, id: _id, link: link, default_channel: default_channel[0])
                 results.append(currentServer)
             }
             completionHandler(results)
         }
     }
     
+    func failedToJoinServer(completionHandler: @escaping() -> Void){
+        socket.on("failedToJoinServer") {
+            data, ack in
+            completionHandler()
+        }
+    }
     
+    func failedToCreateServer(completionHandler: @escaping() -> Void) {
+        socket.on("failedToCreateServer") {
+            data, ack in
+            completionHandler()
+        }
+    }
+    
+    func failedToCreateChannel(completionHandler: @escaping() -> Void) {
+        socket.on("failedToCreateChannel") {
+            data, ack in
+            completionHandler()
+        }
+    }
     
     func sendMessage(message: String, withUsername username: String, room: String) {
         socket.emit("chatMessage", username, message, room)

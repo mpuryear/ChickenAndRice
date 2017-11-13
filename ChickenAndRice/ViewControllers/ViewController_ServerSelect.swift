@@ -29,7 +29,6 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         // create a new server with name
         SocketIOManager.sharedInstance.createServer(username: Model_User.current_user.username, servername: inputTextField.text!)
         
-        
     }
     
     
@@ -51,6 +50,20 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
            (results) -> Void in
             self.appendToData(server: results)
             self.serverTableView.reloadData()
+        });
+        
+        SocketIOManager.sharedInstance.failedToJoinServer(completionHandler: { () -> Void in
+            
+            // TODO Alert user that this server doesnt exist via UIALert
+            // see login view controller for example
+            
+        });
+        
+    SocketIOManager.sharedInstance.failedToCreateServer(completionHandler: {
+            () -> Void in
+        // TODO Alert user that this server doesnt exist via UIALert
+        // see login view controller for example
+        
         });
         
         // Do any additional setup after loading the view.
@@ -89,22 +102,23 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         
         selectedLabel = (currentCell.serverName?.text)!
       
-        
-        // TODO change channel to first channel of the selected server
-        /*
-        
+        Model_Server.current_server.name = self.servers[indexPath!.row].name
+        Model_Server.current_server._id = self.servers[indexPath!.row]._id
+        Model_Server.current_server.default_channel = self.servers[indexPath!.row].default_channel
+
         SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
         
-        Model_Channel.current_channel.name = selectedLabel
+        
+//        Model_Channel.current_channel.name = Model_Server.current_server.default_channel
         
         SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
  
-         */
         
         
-        Model_Server.current_server.name = self.servers[indexPath!.row].name
-        Model_Server.current_server._id = self.servers[indexPath!.row]._id
-       
+        
+
+        
+        
        Model_Server.current_server.shareableLink =
         self.servers[indexPath!.row].shareableLink;
         SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
