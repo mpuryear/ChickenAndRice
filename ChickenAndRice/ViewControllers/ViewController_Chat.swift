@@ -185,7 +185,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
 
     
         // TODO : THEMES
-        if Modeel_User.current_user.theme {
+        if Model_User.current_user.theme {
             // white bg black text
             
         } else {
