@@ -13,11 +13,13 @@ class Model_User : NSObject{
     public var username: String
     public var password: String
     public var authenticated: Bool
+    public var theme : Bool
     
     override init() {
         self.username = ""
         self.password = ""
         self.authenticated = false
+        self.theme = false
         super.init()
     }
     
@@ -25,6 +27,7 @@ class Model_User : NSObject{
         self.username = username
         self.password = password
         self.authenticated = authenticated
+        self.theme = false
         super.init()
     }
     

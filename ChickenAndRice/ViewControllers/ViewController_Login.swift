@@ -100,7 +100,7 @@ class ViewController_Login: UIViewController {
     }
     
     func handleConnected() {
-        
+        Toast.showPositiveMessage(message: "Connected")
     }
     
     func handleConnecting() {

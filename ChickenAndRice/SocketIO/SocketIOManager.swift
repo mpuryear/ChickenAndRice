@@ -210,10 +210,9 @@ class SocketIOManager : NSObject {
             
             let data = dataArray[0] as! [[String : AnyObject]]
             for i in data {
-                var name = ""
-                var _id = ""
-                name = i["name"] as! String
-                _id = i["_id"] as! String
+        
+                let name = i["name"] as! String
+                let _id = i["_id"] as! String
             
                 let currentChannel = Model_Channel(name: name, id: _id)
                 channels.append(currentChannel)

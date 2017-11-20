@@ -1018,7 +1018,7 @@ open class WebSocket : NSObject, StreamDelegate {
                     }
                     firstByte |= s.RSV1Mask
                 } catch {
-                    // TODO: report error?  We can just send the uncompressed frame.
+                    
                 }
             }
             let dataLength = data.count

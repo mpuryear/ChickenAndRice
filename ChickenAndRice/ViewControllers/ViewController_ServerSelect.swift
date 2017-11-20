@@ -22,11 +22,26 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
   
     @IBAction func didTapJoinServer(_ sender: Any) {
         // attempt to join based on connect string
+        
+        if inputTextField.text == "" {
+            // TODO Alert user there must be text in the field
+
+            
+            return;
+        }
+        
         SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: inputTextField.text!)
     }
     
     @IBAction func didTapCreateServer(_ sender: Any) {
         // create a new server with name
+        
+        if inputTextField.text == "" {
+            // TODO Alert user there must be text in the field
+            
+            return;
+        }
+        
         SocketIOManager.sharedInstance.createServer(username: Model_User.current_user.username, servername: inputTextField.text!)
         
     }
@@ -64,6 +79,10 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         // TODO Alert user that this server doesnt exist via UIALert
         // see login view controller for example
         
+        });
+        
+        SocketIOManager.sharedInstance.getChannel(completionHandler: { (channel) -> Void in
+               Model_Channel.current_channel.name = channel[0].name
         });
         
         // Do any additional setup after loading the view.
@@ -109,7 +128,7 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
         
         
-//        Model_Channel.current_channel.name = Model_Server.current_server.default_channel
+
         
         SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
  

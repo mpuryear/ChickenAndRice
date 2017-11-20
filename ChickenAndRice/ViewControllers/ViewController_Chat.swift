@@ -36,12 +36,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func didTapServerSelect(_ sender: Any) {
         self.performSegue(withIdentifier: "Segue_ChatToServer", sender: self)
     }
-    @IBAction func didTapDisconnect(_ sender: Any) {
-        //SocketIOManager.sharedInstance.closeConnection()
-        handleDisconnected()
-        SocketIOManager.sharedInstance.closeConnection()
-    }
-    
+        
     
     @IBAction func didTapChannelSelect(_ sender: Any) {
 
@@ -131,19 +126,19 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func handleNotConnected() {
-       //self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+       
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
         }
-     //   SocketIOManager.sharedInstance.reconnect()
+     
     }
     
     func handleDisconnected() {
-       // self.performSegue(withIdentifier: "unwindChatToLogin", sender: nil)
+      
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
         }
-     //   SocketIOManager.sharedInstance.reconnect()
+     
        
     }
     
@@ -189,6 +184,16 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         chatTableView.separatorStyle = .none   
 
     
+        // TODO : THEMES
+        if Modeel_User.current_user.theme {
+            // white bg black text
+            
+        } else {
+            // dark theme. black bg white text
+            
+        }
+        
+        
         print("View did Load")
 
         

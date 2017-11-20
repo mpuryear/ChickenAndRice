@@ -168,16 +168,6 @@
                                     <action selector="didTapSend:" destination="YvE-p8-3fP" eventType="touchUpInside" id="NfI-jP-bqo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imz-uM-mGe">
-                                <rect key="frame" x="293" y="86" width="101" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="LBk-fT-iyk"/>
-                                </constraints>
-                                <state key="normal" title="Disconnect"/>
-                                <connections>
-                                    <action selector="didTapDisconnect:" destination="YvE-p8-3fP" eventType="touchUpInside" id="t4X-zX-QF5"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9If-gP-Oky" userLabel="Server Select Button">
                                 <rect key="frame" x="0.0" y="86" width="108" height="30"/>
                                 <state key="normal" title="general"/>
@@ -201,7 +191,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It2-Fk-4Bi" userLabel="Channel Select Button">
-                                <rect key="frame" x="175" y="86" width="64" height="30"/>
+                                <rect key="frame" x="175" y="86" width="54" height="30"/>
                                 <state key="normal" title="General"/>
                                 <connections>
                                     <action selector="didTapChannelSelect:" destination="YvE-p8-3fP" eventType="touchUpInside" id="UBd-17-F8c"/>
@@ -221,7 +211,6 @@
                             <constraint firstItem="f3h-Jk-4kO" firstAttribute="top" secondItem="oHk-u1-0C9" secondAttribute="bottom" constant="8" id="Fjq-Ru-yHy"/>
                             <constraint firstItem="viV-KQ-W6I" firstAttribute="leading" secondItem="yEE-bW-5LW" secondAttribute="leading" constant="342" id="G2u-ed-wMC"/>
                             <constraint firstItem="ZPs-cU-ibz" firstAttribute="top" secondItem="9If-gP-Oky" secondAttribute="bottom" constant="8" symbolic="YES" id="Gim-VQ-dIO"/>
-                            <constraint firstItem="It2-Fk-4Bi" firstAttribute="baseline" secondItem="Imz-uM-mGe" secondAttribute="baseline" id="M1G-oo-nt8"/>
                             <constraint firstItem="oHk-u1-0C9" firstAttribute="leading" secondItem="f3h-Jk-4kO" secondAttribute="leading" id="NcX-Dx-5G5"/>
                             <constraint firstItem="YYw-eB-HED" firstAttribute="leading" secondItem="oHk-u1-0C9" secondAttribute="leading" id="VpY-Y0-f6b"/>
                             <constraint firstItem="oHk-u1-0C9" firstAttribute="top" secondItem="YYw-eB-HED" secondAttribute="bottom" constant="26" id="X4Q-hr-B1P"/>
@@ -230,10 +219,8 @@
                             <constraint firstItem="f3h-Jk-4kO" firstAttribute="bottom" secondItem="viV-KQ-W6I" secondAttribute="bottom" id="dtO-Xy-own"/>
                             <constraint firstItem="ZPs-cU-ibz" firstAttribute="leading" secondItem="YYw-eB-HED" secondAttribute="leading" id="lnN-zV-CGJ"/>
                             <constraint firstItem="9If-gP-Oky" firstAttribute="leading" secondItem="lUR-6Z-lRN" secondAttribute="leading" id="mbw-Pv-HWy"/>
-                            <constraint firstItem="Imz-uM-mGe" firstAttribute="leading" secondItem="It2-Fk-4Bi" secondAttribute="trailing" constant="54" id="p1x-wH-Cej"/>
                             <constraint firstItem="oHk-u1-0C9" firstAttribute="leading" secondItem="lUR-6Z-lRN" secondAttribute="leadingMargin" id="rjF-5K-GVd"/>
                             <constraint firstItem="It2-Fk-4Bi" firstAttribute="top" secondItem="yEE-bW-5LW" secondAttribute="top" constant="22" id="sza-nF-Kpa"/>
-                            <constraint firstItem="yEE-bW-5LW" firstAttribute="trailing" secondItem="Imz-uM-mGe" secondAttribute="trailing" constant="20" id="vJU-JM-GtN"/>
                             <constraint firstItem="yEE-bW-5LW" firstAttribute="bottom" secondItem="f3h-Jk-4kO" secondAttribute="bottom" constant="20" id="yMW-Fj-Dkj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yEE-bW-5LW"/>

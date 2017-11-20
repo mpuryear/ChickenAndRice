@@ -309,7 +309,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
     }
 
     private func createWebSocketAndConnect() {
-        ws?.delegate = nil // TODO this seems a bit defensive, is this really needed?
+        ws?.delegate = nil 
         ws = WebSocket(url: urlWebSocketWithSid)
 
         if cookies != nil {
