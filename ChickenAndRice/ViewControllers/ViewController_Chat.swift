@@ -39,7 +39,6 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
     
     @IBAction func didTapChannelSelect(_ sender: Any) {
-
         SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
        clickedChannels = true
     }
