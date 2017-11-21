@@ -18,7 +18,7 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
     
     @IBAction func didTapCreateChannel(_ sender: Any) {
         if newChannelTextField.text != "" {
-        SocketIOManager.sharedInstance.createChanne(username: Model_User.current_user.username, channel_name: newChannelTextField.text!, server_id: Model_Server.current_server._id)
+        SocketIOManager.sharedInstance.createChannel(username: Model_User.current_user.username, channel_name: newChannelTextField.text!, server_id: Model_Server.current_server._id)
         } else {
             // TODO alert, field cannot be empty
         }
@@ -85,11 +85,16 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         
         selectedLabel = (currentCell.channelName?.text)!
         
-        SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
+        // leave current channel
+        SocketIOManager.sharedInstance.leaveChannel(username: Model_User.current_user.username, channel_id: Model_Channel.current_channel._id)
         
+        // update our current channel
         Model_Channel.current_channel.name = selectedLabel
+        Model_Channel.current_channel._id = self.channels[(indexPath?.row)!]._id
         
-        SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
+        // join newly selected channel
+        SocketIOManager.sharedInstance.joinChannel(username: Model_User.current_user.username, channel_id: Model_Channel.current_channel._id)
+        
         
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
@@ -112,8 +117,6 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         
         let currentChannel = self.channels[indexPath.row]
         
-        
-        // Color the user name if it is the current user
     
         // add our text to our views
         cell.channelName.text = currentChannel.name

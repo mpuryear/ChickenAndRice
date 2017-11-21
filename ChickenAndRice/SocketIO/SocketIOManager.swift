@@ -137,19 +137,47 @@ class SocketIOManager : NSObject {
         }
     }
     
-    func joinServer(username: String, room: String) {
-        socket.emit("joinRoom", username, room)
+    
+    func requestMessagesByChannelId(username: String, channel_id: String) {
+        socket.emit("getMessagesByChannelId", username, channel_id)
     }
     
-    func leaveServer(username: String, room: String) {
-        socket.emit("leaveRoom", username, room)
+    // response from "getMessagesByChannelId
+    func getChatMessagesForChannel(completionHandler: @escaping (_ messages: [Model_Message]) -> Void) {
+        socket.on("messages") {
+            dataArray, ack -> Void in
+            
+            var messages : [Model_Message] = []
+            
+                let data = dataArray[0] as! [[String : AnyObject]]
+                for i in data {
+                
+                    let dateTime = i["created"] as! String
+                    let message = i["text"] as! String
+                    let username = i["sender"] as! String
+                    let thumbnail_id = i["thumbnail_id"] as! String
+                
+                    let currentMessage = Model_Message(dateTime: dateTime, message: message, username: username, thumbnail_id: thumbnail_id)
+                    messages.append(currentMessage)
+                }
+
+            completionHandler(messages)
+        }
+    }
+    
+    func joinChannel(username: String, channel_id: String) {
+        socket.emit("joinChannel", username, channel_id)
+    }
+    
+    func leaveChannel(username: String, channel_id: String) {
+        socket.emit("leaveChannel", username, channel_id)
     }
     
     func createServer(username: String, servername: String) {
         socket.emit("createServer", username, servername)
     }
     
-    func createChanne(username: String, channel_name: String, server_id: String) {
+    func createChannel(username: String, channel_name: String, server_id: String) {
         socket.emit("createChannel", username, channel_name, server_id)
     }
     
@@ -289,7 +317,7 @@ class SocketIOManager : NSObject {
         }
     }
     
-    func sendMessage(message: String, withUsername username: String, room: String) {
-        socket.emit("chatMessage", username, message, room)
+    func sendMessage(message: String, withUsername username: String, channel_id: String) {
+        socket.emit("chatMessage", username, message, channel_id)
     }
 }

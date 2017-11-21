@@ -34,16 +34,12 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var channelSelectButton: UIButton!
     
     @IBAction func didTapServerSelect(_ sender: Any) {
-        self.performSegue(withIdentifier: "Segue_ChatToServer", sender: self)
+       SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
     }
         
     
     @IBAction func didTapChannelSelect(_ sender: Any) {
 
-        // clear messages
-        messageModel.removeAll()
-        chatTableView.reloadData()
-        
         SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
        clickedChannels = true
     }
@@ -52,7 +48,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         print("didTapSend")
         if let text = messageTextField.text, !text.isEmpty {
             SocketIOManager.sharedInstance.sendMessage(message: messageTextField.text!, withUsername: Model_User.current_user.username,
-                                                       room: Model_Channel.current_channel.name )
+                                                       channel_id: Model_Channel.current_channel._id )
             
             messageTextField.text = "" // clear the text box
         }
@@ -72,6 +68,13 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
             (results) -> Void in DispatchQueue.main.async {
                 self.responseChannels = results
                 if self.clickedChannels {
+                // clear messages
+                self.messageModel.removeAll()
+                self.chatTableView.reloadData()
+                    // set Model_Channel.current
+                    Model_Channel.current_channel._id = self.responseChannels[0]._id
+                    Model_Channel.current_channel.name = self.responseChannels[0].name
+                    
                 self.performSegue(withIdentifier: "Segue_ChatToChannel", sender: self)
                 }
                 self.clickedChannels = false
@@ -83,6 +86,11 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         SocketIOManager.sharedInstance.getServer(completionHandler: {
             (results) -> Void in DispatchQueue.main.async {
                 self.responseServers = results
+            
+                self.messageModel.removeAll()
+                self.chatTableView.reloadData()
+                
+                 self.performSegue(withIdentifier: "Segue_ChatToServer", sender: self)
             }
         })
     }
@@ -172,6 +180,20 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
+    func establishChannelJoinMessageHandling() {
+        SocketIOManager.sharedInstance.getChatMessagesForChannel(completionHandler: {
+            (channelMessages) -> Void in
+            self.messageModel = channelMessages
+            self.chatTableView.reloadData()
+
+            if self.messageModel.count > 0 {
+                // scroll to bottom of the tableview but only if we have something to scroll to
+                let indexPath = NSIndexPath(row: self.messageModel.count - 1, section: 0)
+                self.chatTableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: false)
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -198,16 +220,17 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
 
         
         establishMessageHandling()
+        establishChannelJoinMessageHandling()
         establishStatusChangeHandling()
         establishChannelHandling()
         establishServerHandling()
         
         SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "general")
+        Model_Channel.current_channel._id = "5a06f87aa551eb6a1c6b9057" // default channel id
         
-        SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
-       
-        // get channels for our default server
-        SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
+        
+        //SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
+   
         
         ViewController_Chat.hasLoaded = true
     }
@@ -219,8 +242,15 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         serverSelectButton.setTitle(Model_Server.current_server.name, for: .normal)
         channelSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
 
-            shareableStringTextView.text = Model_Server.current_server.shareableLink
+        shareableStringTextView.text = Model_Server.current_server.shareableLink
+  
         
+        // requeest messages for current channel.
+       //curre SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
+        
+        
+        
+        SocketIOManager.sharedInstance.requestMessagesByChannelId(username: Model_User.current_user.username, channel_id: Model_Channel.current_channel._id)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

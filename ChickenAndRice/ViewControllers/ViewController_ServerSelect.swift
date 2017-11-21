@@ -85,6 +85,19 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
                Model_Channel.current_channel.name = channel[0].name
         });
         
+        
+        SocketIOManager.sharedInstance.getChannel(completionHandler: {
+            (results) -> Void in DispatchQueue.main.async {
+                
+               
+                    Model_Channel.current_channel._id = results[0]._id
+                    Model_Channel.current_channel.name = results[0].name
+                    
+               
+                }
+           
+           
+        })
         // Do any additional setup after loading the view.
     }
     
@@ -121,25 +134,23 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         
         selectedLabel = (currentCell.serverName?.text)!
       
+        // Leave our current channel and then join the default of our newly selected server
+        SocketIOManager.sharedInstance.leaveChannel(username: Model_User.current_user.username, channel_id: Model_Channel.current_channel._id)
+
+        
         Model_Server.current_server.name = self.servers[indexPath!.row].name
         Model_Server.current_server._id = self.servers[indexPath!.row]._id
         Model_Server.current_server.default_channel = self.servers[indexPath!.row].default_channel
 
-        SocketIOManager.sharedInstance.leaveServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
         
-        
-
-        
-        SocketIOManager.sharedInstance.joinServer(username: Model_User.current_user.username, room: Model_Channel.current_channel.name)
+        SocketIOManager.sharedInstance.joinChannel(username: Model_User.current_user.username, channel_id: Model_Server.current_server.default_channel)
  
-        
-        
-        
-
         
         
        Model_Server.current_server.shareableLink =
         self.servers[indexPath!.row].shareableLink;
+       
+        
         SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
         
         
