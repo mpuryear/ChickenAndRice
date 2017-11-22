@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.191243"
+            timestampString = "533037896.785183"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
@@ -109,8 +109,8 @@
             timestampString = "532950998.559347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "ViewController_Chat"
             landmarkType = "3">
          </BreakpointContent>
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.191722"
+            timestampString = "533037896.788474"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Login.swift"
-            timestampString = "532196383.795947"
+            timestampString = "533037896.788748"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "handleNotConnected()"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Login.swift"
-            timestampString = "532196383.796107"
+            timestampString = "533037896.788802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "handleDisconnected()"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.19185"
+            timestampString = "533037896.788847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Login.swift"
-            timestampString = "532196383.796375"
+            timestampString = "533037896.789024"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "authenticateLogin()"
             landmarkType = "7">
             <Locations>
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Login.swift"
-            timestampString = "532196383.796502"
+            timestampString = "533037896.789089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.191948"
+            timestampString = "533037896.789134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.192066"
+            timestampString = "533037896.789295"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "serverCreated(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.192128"
+            timestampString = "533037896.789401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "serverCreated(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -394,11 +394,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.19224"
+            timestampString = "533037896.790491"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "getChatMessagesForChannel(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -410,12 +410,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.192291"
+            timestampString = "533037896.790769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "getChatMessagesForChannel(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
+            timestampString = "533037896.790983"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "getChatMessagesForChannel(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ChickenAndRice/Models/Model_User.swift"
+            timestampString = "533037896.791176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -426,12 +458,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/SocketIO/SocketIOManager.swift"
-            timestampString = "532943892.192339"
+            timestampString = "533037896.791299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "getChatMessagesForChannel(completionHandler:)"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "getChatMessage(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -113,11 +113,26 @@ class SocketIOManager : NSObject {
         socket.emit("connectUser", username, password)
     }
 
-    func loginAuthenticated(username: String, completionHandler: @escaping () -> Void){
-        socket.on("client_login_authenticated") { (dataArray, socketAck)  -> Void in
-            completionHandler()  
+    func loginAuthenticated(username: String, completionHandler: @escaping (_ user_thumbnail: Data) -> Void){
+        socket.on("client_login_authenticated") { (data, socketAck)  -> Void in
+            
+            // this returns the client thumbnail
+             let t = data[0] as! [String : AnyObject]
+           
+            if let thumbnail_dict = t["data"] as? NSDictionary {
+                let bytes = thumbnail_dict["data"] as! [UInt8]
+                let thumbnail = NSData(bytes: bytes, length: bytes.count)
+                completionHandler(thumbnail as Data)
+                return
+            }
+            
+            // if our login didnt had a thumbnail. Use the default one, and update the server
+            let path = Bundle.main.path(forResource: "cat", ofType: "png")
+            let thumbnail = NSData.init(contentsOfFile: path!) as Data?
+            
+            self.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail!)
+            completionHandler(thumbnail!)
         }
-        
     }
     
     func invalidLogin(completionHandler: @escaping () -> Void) {
@@ -126,15 +141,44 @@ class SocketIOManager : NSObject {
         }
     }
     
-    func getChatMessage(completionHandler: @escaping (_ messageInfo: [String: AnyObject]) -> Void) {
-        socket.on("newChatMessage") { (dataArray, socketAck) -> Void in
-            var messageDictionary = [String: AnyObject]()
-            messageDictionary["username"] = dataArray[0] as! String as AnyObject
-            messageDictionary["message"] = dataArray[1] as! String as AnyObject
-            messageDictionary["date"] = dataArray[2] as! String as AnyObject
+    func getChatMessage(completionHandler: @escaping (_ message: Model_Message) -> Void) {
+        socket.on("newChatMessage") { (data, socketAck) -> Void in
             
-            completionHandler(messageDictionary)
+            
+           let t = data[0] as! [String : AnyObject]
+            
+                
+            let dateTime = t["created"] as! String
+            let message = t["text"] as! String
+            let username = t["sender"] as! String
+               
+                
+                
+            let currentMessage = Model_Message()
+                
+
+            let thumbnail_tuple = t["thumbnail"] as! [String: AnyObject]
+            
+            
+            let thumbnail_dict = thumbnail_tuple["data"] as! NSDictionary
+         
+            print(thumbnail_dict["data"] as Any)
+            print((thumbnail_dict["data"] as! Array<Int>).count)
+            
+            let bytes = thumbnail_dict["data"] as! [UInt8]
+            let thumbnail = NSData(bytes: bytes, length: bytes.count)
+           // let receivedData = thumbnail_dict["data"] as! NSData
+            
+           
+            // use default image
+            currentMessage.dateTime = dateTime
+            currentMessage.message = message
+            currentMessage.username = username
+            currentMessage.thumbnail = thumbnail as Data
+           
+            completionHandler(currentMessage)
         }
+
     }
     
     
@@ -156,8 +200,29 @@ class SocketIOManager : NSObject {
                     let message = i["text"] as! String
                     let username = i["sender"] as! String
                     let thumbnail_id = i["thumbnail_id"] as! String
-                
-                    let currentMessage = Model_Message(dateTime: dateTime, message: message, username: username, thumbnail_id: thumbnail_id)
+                    
+                    // use default image
+                    let currentMessage = Model_Message()
+                    currentMessage.dateTime = dateTime
+                    currentMessage.message = message
+                    currentMessage.username = username
+                    
+                    if let thumbnail_tuple = i["thumbnail"] as? [String: AnyObject] {
+                    
+                    let thumbnail_dict = thumbnail_tuple["data"] as! NSDictionary
+                    
+                    print(thumbnail_dict["data"] as Any)
+                    print((thumbnail_dict["data"] as! Array<Int>).count)
+                    
+                    let bytes = thumbnail_dict["data"] as! [UInt8]
+                    let thumbnail = NSData(bytes: bytes, length: bytes.count)
+                    // let receivedData = thumbnail_dict["data"] as! NSData
+                    
+                    
+                    
+                    // only add our unique thumbnail if our user has one
+                    currentMessage.thumbnail = thumbnail as Data
+                    }
                     messages.append(currentMessage)
                 }
 
@@ -317,7 +382,12 @@ class SocketIOManager : NSObject {
         }
     }
     
-    func sendMessage(message: String, withUsername username: String, channel_id: String) {
-        socket.emit("chatMessage", username, message, channel_id)
+    func sendMessage(message: String, withUsername username: String, channel_id: String, thumbnail: Data) {
+        
+        socket.emit("chatMessage", username, message, channel_id, thumbnail)
+    }
+    
+    func changeUserThumbnail(username: String, thumbnail: Data) {
+        socket.emit("changeUserThumbnail", username, thumbnail)
     }
 }
