@@ -73,16 +73,22 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         var thumbnail : Data
         switch thmbIdx {
         case 1: thumbnail = (NSData.init(contentsOfFile: path1!) as Data?)!
-        image = (UIImage(named: string1) as UIImage?)!
+        image = UIImage(imageLiteralResourceName: string1 + ".png")
         case 2: thumbnail = (NSData.init(contentsOfFile: path2!) as Data?)!
         image = UIImage(imageLiteralResourceName: string2 + ".jpeg")//(UIImage(named: string2) as UIImage?)!
         default: thumbnail = (NSData.init(contentsOfFile: path0!) as Data?)!
-        image = (UIImage(named: string0) as UIImage?)!
+        image = UIImage(imageLiteralResourceName: string0 + ".png")
         }
         thmbIdx = (thmbIdx + 1) % 3
         print("thmbIdx \(thmbIdx)")
         
-        thumbnailButton.setImage(image, for: .normal)
+
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        thumbnailButton.setTitle("", for: .normal)
+//        thumbnailButton.setImage(image, for: .normal)
+        thumbnailButton.setBackgroundImage(image, for: .normal)
+
         
         Model_User.current_user.thumbnail = thumbnail
         
