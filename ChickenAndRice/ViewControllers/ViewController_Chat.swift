@@ -14,6 +14,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     var messageModel : [Model_Message] = [Model_Message]()
     static var hasLoaded : Bool =  false
 
+    var thmbIdx : Int = 0
     
     var responseChannels : [Model_Channel] = []
     var responseServers : [Model_Server] = []
@@ -33,6 +34,8 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet weak var channelSelectButton: UIButton!
     
+    @IBOutlet weak var thumbnailButton: UIButton!
+    
     @IBAction func didTapServerSelect(_ sender: Any) {
        SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
     }
@@ -44,11 +47,60 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
        clickedChannels = true
     }
     
+    
+    @IBAction func didTapThumbnail(_ sender: Any) {
+        
+        print("didTapThumbnail")
+
+        // TODO:  implement gallery image picker
+        // http://www.codingexplorer.com/choosing-images-with-uiimagepickercontroller-in-swift/
+        
+        
+
+        // This simply allows us to cycle through our images in ./Art
+        var image : UIImage
+        
+        let string0 = "cat"
+        let string1 = "send_icon"
+        let string2 = "chicken_and_rice"
+        
+        
+        // for testing cycle between thumbnails.
+        let path0 = Bundle.main.path(forResource: string0, ofType: "png")
+        let path1 = Bundle.main.path(forResource: string1, ofType: "png")
+        let path2 = Bundle.main.path(forResource: string2, ofType: "jpeg")
+        
+        var thumbnail : Data
+        switch thmbIdx {
+        case 1: thumbnail = (NSData.init(contentsOfFile: path1!) as Data?)!
+        image = (UIImage(named: string1) as UIImage?)!
+        case 2: thumbnail = (NSData.init(contentsOfFile: path2!) as Data?)!
+        image = UIImage(imageLiteralResourceName: string2 + ".jpeg")//(UIImage(named: string2) as UIImage?)!
+        default: thumbnail = (NSData.init(contentsOfFile: path0!) as Data?)!
+        image = (UIImage(named: string0) as UIImage?)!
+        }
+        thmbIdx = (thmbIdx + 1) % 3
+        print("thmbIdx \(thmbIdx)")
+        
+        thumbnailButton.setImage(image, for: .normal)
+        
+        Model_User.current_user.thumbnail = thumbnail
+        
+        
+        // We will call this when the user actually selects a thumbnail, not just at the end of this func
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        
+    }
+    
     @IBAction func didTapSend(_ sender: Any) {
         print("didTapSend")
         if let text = messageTextField.text, !text.isEmpty {
-            SocketIOManager.sharedInstance.sendMessage(message: messageTextField.text!, withUsername: Model_User.current_user.username,
-                                                       channel_id: Model_Channel.current_channel._id )
+            SocketIOManager.sharedInstance.sendMessage(
+                message: messageTextField.text!,
+                withUsername: Model_User.current_user.username,
+                channel_id: Model_Channel.current_channel._id,
+                thumbnail: Model_User.current_user.thumbnail!
+            )
             
             messageTextField.text = "" // clear the text box
         }
@@ -97,28 +149,15 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     func establishMessageHandling() {
         print("Establishing message handling")
-        SocketIOManager.sharedInstance.getChatMessage(completionHandler: { (messageInfo) -> Void in DispatchQueue.main.async{
+        SocketIOManager.sharedInstance.getChatMessage(completionHandler: { (message) -> Void in DispatchQueue.main.async{
             () -> Void in
+
             
-            let currentMessage = Model_Message()
+            // now that we recieved a message, we need to get the thumbnail from the server.
             
-            if let date = messageInfo["date"] as? String {
-                
-                let modifiedDate = "[" + date + "] "
-                currentMessage.dateTime = modifiedDate
-            }
-            if let username = messageInfo["username"] as? String {
-                
-                let modifiedUsername = username
-                currentMessage.username = modifiedUsername
-            }
-            if let message = messageInfo["message"] as? String {
-                
-                currentMessage.message = message
-            }
             
             print("\nmessage appended\n")
-            self.messageModel.append(currentMessage)
+            self.messageModel.append(message)
             self.chatTableView.reloadData()
         
             print("played sound")
@@ -172,10 +211,6 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
                 case "connected": self.handleConnected()
                 default: break
                 }
-                
-                
-                
-                
             }});
     }
     
@@ -320,8 +355,38 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         cell.dateTextView?.text = currentMessage.dateTime
         cell.usernameTextView?.attributedText = attribString
         cell.messageTextView?.text = currentMessage.message
+        cell.thumbnail.image = UIImage(data: currentMessage.thumbnail!)
+        cell.thumbnail.image = resizeImage(image: cell.thumbnail.image!, targetSize: CGSize(width: 32, height: 32))
+        
         
         return cell
+    }
+    
+    // resize the image to targetSize
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
  
 }

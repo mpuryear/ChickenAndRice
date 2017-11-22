@@ -86,7 +86,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="121"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="trp-od-kxw" id="Ufj-W3-G2c">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="120.66666666666667"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="120.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" scrollEnabled="NO" editable="NO" text="USERNAME" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-Kb-NcH">
@@ -197,6 +197,14 @@
                                     <action selector="didTapChannelSelect:" destination="YvE-p8-3fP" eventType="touchUpInside" id="UBd-17-F8c"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82W-HR-4cq">
+                                <rect key="frame" x="301" y="86" width="79" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thumbnail"/>
+                                <connections>
+                                    <action selector="didTapThumbnail:" destination="YvE-p8-3fP" eventType="touchUpInside" id="v01-Go-E18"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -231,6 +239,7 @@
                         <outlet property="messageTextField" destination="f3h-Jk-4kO" id="7Tt-0l-aJ1"/>
                         <outlet property="serverSelectButton" destination="9If-gP-Oky" id="YpT-bu-lnc"/>
                         <outlet property="shareableStringTextView" destination="YYw-eB-HED" id="aRC-S7-lIB"/>
+                        <outlet property="thumbnailButton" destination="82W-HR-4cq" id="dqB-ox-HyA"/>
                         <segue destination="ELN-Td-vzb" kind="unwind" identifier="unwindChatToLogin" unwindAction="unwindToLoginWithSender:" id="uO2-rn-RkU"/>
                         <segue destination="jlr-fe-0vW" kind="show" identifier="Segue_ChatToChannel" id="0lI-Qr-Fvd"/>
                         <segue destination="d0H-2a-dEq" kind="show" identifier="Segue_ChatToServer" id="Bo1-2a-yHi"/>
@@ -258,7 +267,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jV8-DT-SBH" id="vw4-8g-ueK">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxM-cm-F2h">
@@ -310,7 +319,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeR-Lr-nTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815.9420289855075" y="-150"/>
+            <point key="canvasLocation" x="2503" y="-1444"/>
         </scene>
         <!--View Controller Channel Select-->
         <scene sceneID="g9q-Ia-kWG">
@@ -329,7 +338,7 @@
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aCb-JC-UA1" id="Np3-hG-Evi">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ChannelName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m5-0s-AkS">
@@ -373,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewc-55-9E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815.9420289855075" y="-911.41304347826099"/>
+            <point key="canvasLocation" x="3290" y="-1445"/>
         </scene>
         <!--View Controller Register User-->
         <scene sceneID="6i7-lm-mqE">

@@ -91,8 +91,9 @@ class ViewController_Login: UIViewController {
     
     func authenticateLogin() {
 
-        SocketIOManager.sharedInstance.loginAuthenticated(username: usernameTextField.text!, completionHandler: { () -> Void in
+        SocketIOManager.sharedInstance.loginAuthenticated(username: usernameTextField.text!, completionHandler: { (thumbnail) -> Void in
             print("\ncalled\n")
+            Model_User.current_user.thumbnail = thumbnail
             self.performSegue(withIdentifier: "Segue_LoginToChat", sender: self)
             Model_User.current_user.authenticated = true
         })
