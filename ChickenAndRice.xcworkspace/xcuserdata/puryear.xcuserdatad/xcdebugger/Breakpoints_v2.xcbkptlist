@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Chat.swift"
-            timestampString = "532950998.559156"
+            timestampString = "533087268.854556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Chat.swift"
-            timestampString = "532950998.559347"
+            timestampString = "533087268.855845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ChickenAndRice/ViewControllers/ViewController_Chat.swift"
-            timestampString = "532950998.55941"
+            timestampString = "533087268.856823"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "handleDisconnected()"
             landmarkType = "7">
          </BreakpointContent>
