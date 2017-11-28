@@ -20,7 +20,10 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         if newChannelTextField.text != "" {
         SocketIOManager.sharedInstance.createChannel(username: Model_User.current_user.username, channel_name: newChannelTextField.text!, server_id: Model_Server.current_server._id)
         } else {
-            // TODO alert, field cannot be empty
+            // field cannot be empty
+            let alert = UIAlertController(title: "Alert", message: "Field cannot be empty", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     var selectedLabel : String = ""
@@ -42,9 +45,9 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         
         
         SocketIOManager.sharedInstance.failedToCreateChannel(completionHandler: { () -> Void in
-            
-            // TODO Alert user that this channel couldnt be created via UIALert
-            // see login view controller for example
+            let alert = UIAlertController(title: "Alert", message: "Failed to create channel", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
         });
         // Do any additional setup after loading the view.
