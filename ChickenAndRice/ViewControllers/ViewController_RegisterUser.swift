@@ -30,7 +30,10 @@ class ViewController_RegisterUser: UIViewController {
     func registerUserHandler() {
         SocketIOManager.sharedInstance.username_taken(completionHandler: {
            () -> Void in
-            // TODO add UIAlertController for taken username, see viewController_Login
+            // UIAlertController for taken username, see viewController_Login
+            let alert = UIAlertController(title: "Alert", message: "Username is already taken", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         })
         
         SocketIOManager.sharedInstance.user_created(completionHandler: {

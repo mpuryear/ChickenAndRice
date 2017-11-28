@@ -148,7 +148,7 @@ class ViewController_Login: UIViewController {
             DispatchQueue.main.async{
                 () -> Void in
                 Model_User.current_user.authenticated = false
-                
+                // Example for registeruser
                 let alert = UIAlertController(title: "Alert", message: "Incorrect username/password", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -77,7 +77,7 @@
 
 /* Begin PBXFileReference section */
 		0070E883AB24ABEF581CCDF71C5E8A62 /* Pods-ChickenAndRice-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChickenAndRice-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0259246C8329869DF4A97BC31D5EEA1C /* Pods-ChickenAndRice.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ChickenAndRice.modulemap"; sourceTree = "<group>"; };
+		0259246C8329869DF4A97BC31D5EEA1C /* Pods-ChickenAndRice.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChickenAndRice.modulemap"; sourceTree = "<group>"; };
 		04A352948EB4B4F142BBB6C96FEA3336 /* SocketAnyEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAnyEvent.swift; path = Source/SocketIO/Client/SocketAnyEvent.swift; sourceTree = "<group>"; };
 		093D185D420C1827C23545A1326E62CE /* Socket.IO-Client-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Socket.IO-Client-Swift.xcconfig"; sourceTree = "<group>"; };
 		0CA6E043CCA261A6C1F29596EC89FECE /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		0F52249DD4D3DD3159B64A42F2E7349B /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1120969D30DAD2C8271201EE21E8ED12 /* SocketParsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketParsable.swift; path = Source/SocketIO/Parse/SocketParsable.swift; sourceTree = "<group>"; };
 		114C4E0037E36D28D1EBDC38C5611E85 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17E969E50F9EEF14012A7EBA8A3E67AC /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
+		17E969E50F9EEF14012A7EBA8A3E67AC /* Socket.IO-Client-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Socket.IO-Client-Swift.modulemap"; sourceTree = "<group>"; };
 		1B5B580B8CBF69155101CBA3DF81EA42 /* SocketClientManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketClientManager.swift; path = Source/SocketIO/Util/SocketClientManager.swift; sourceTree = "<group>"; };
 		2148509A39D5330EFB2CC0F03990943C /* Pods-ChickenAndRice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChickenAndRice.release.xcconfig"; sourceTree = "<group>"; };
 		2221FB3326D7588A85D5B2B60ECF925B /* Pods-ChickenAndRiceTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChickenAndRiceTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 		29D6FD7767A650A661BBDE6BA72D581D /* SocketEnginePollable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEnginePollable.swift; path = Source/SocketIO/Engine/SocketEnginePollable.swift; sourceTree = "<group>"; };
 		2B914A58F204CF58E0A899632F940EE5 /* Pods-ChickenAndRice-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChickenAndRice-frameworks.sh"; sourceTree = "<group>"; };
 		30FE6867BF1E1CE10FC39F83FEAD61EC /* Socket.IO-Client-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Socket.IO-Client-Swift-umbrella.h"; sourceTree = "<group>"; };
-		384CFB4633553AA62DCDCF0D50024559 /* Pods-ChickenAndRiceUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ChickenAndRiceUITests.modulemap"; sourceTree = "<group>"; };
+		384CFB4633553AA62DCDCF0D50024559 /* Pods-ChickenAndRiceUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChickenAndRiceUITests.modulemap"; sourceTree = "<group>"; };
 		38905B7D14E565185F25FF3A18F9D3DC /* SocketIOClientSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientSpec.swift; path = Source/SocketIO/Client/SocketIOClientSpec.swift; sourceTree = "<group>"; };
 		3B0D2F8D3416170C7CAF53EF99C3AB4B /* SocketExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketExtensions.swift; path = Source/SocketIO/Util/SocketExtensions.swift; sourceTree = "<group>"; };
-		3BA9AB9926D776FD17E79DAB154F8B38 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Starscream.modulemap; sourceTree = "<group>"; };
+		3BA9AB9926D776FD17E79DAB154F8B38 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Starscream.modulemap; sourceTree = "<group>"; };
 		3CA0AA02C83791E87BC35D8C362F68CC /* Pods-ChickenAndRiceTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChickenAndRiceTests-umbrella.h"; sourceTree = "<group>"; };
 		48C2C8C3EC86779DEB1BD34FE1F57204 /* Pods-ChickenAndRiceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChickenAndRiceTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		48EBDBF5333C82FF9C975FE2C8BD02AA /* Pods-ChickenAndRice-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChickenAndRice-umbrella.h"; sourceTree = "<group>"; };
@@ -105,13 +105,13 @@
 		565EFC8FAFECC8B920FE61C0DA1664FB /* Pods-ChickenAndRiceUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChickenAndRiceUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5B220DE9811768A33367A37972807704 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5E2EB65A9C0D89A17BB8E487C06A4EB4 /* SocketIOClientConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientConfiguration.swift; path = Source/SocketIO/Client/SocketIOClientConfiguration.swift; sourceTree = "<group>"; };
-		6189734572957A5B147386631FEEFD1F /* Pods_ChickenAndRice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChickenAndRice.framework; path = "Pods-ChickenAndRice.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6189734572957A5B147386631FEEFD1F /* Pods_ChickenAndRice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A2E79AB9F6DE162BC86D6B0984B1C7 /* Pods-ChickenAndRiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChickenAndRiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		638B69AEE6F87938EB84ACB5FE744BB3 /* Pods-ChickenAndRiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChickenAndRiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		690A2A5D8D751FBF81C2866E901B2011 /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientStatus.swift; path = Source/SocketIO/Client/SocketIOClientStatus.swift; sourceTree = "<group>"; };
 		6AEDD27B2B5E2F613A7A68ABB469FF2F /* SocketIOClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClient.swift; path = Source/SocketIO/Client/SocketIOClient.swift; sourceTree = "<group>"; };
 		6CC217501426772CB10346D867CF377C /* Pods-ChickenAndRiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChickenAndRiceUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6D5EE6EDDD8592D85FD1EF7A3302C36E /* Pods_ChickenAndRiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChickenAndRiceUITests.framework; path = "Pods-ChickenAndRiceUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5EE6EDDD8592D85FD1EF7A3302C36E /* Pods_ChickenAndRiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71144BD7D5E86A3145E39CC14B94634E /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngineWebsocket.swift; path = Source/SocketIO/Engine/SocketEngineWebsocket.swift; sourceTree = "<group>"; };
 		76DF37E55C77E72BA14B4C9DF351C718 /* Pods-ChickenAndRiceUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChickenAndRiceUITests-umbrella.h"; sourceTree = "<group>"; };
 		7CE2B77641D9B4CF29962D19B8F64CED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,18 +119,18 @@
 		8B3C483B437BFAC326BF4D0C2E0B9485 /* Pods-ChickenAndRiceTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChickenAndRiceTests-frameworks.sh"; sourceTree = "<group>"; };
 		8E1ECEC61049B64BFB4B71E6E33B2BE0 /* Pods-ChickenAndRice-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChickenAndRice-acknowledgements.plist"; sourceTree = "<group>"; };
 		8FEBA2660F62EEE1D17FE0164446EF22 /* Pods-ChickenAndRice-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChickenAndRice-resources.sh"; sourceTree = "<group>"; };
-		920AC965DB292671F9FF32C305340000 /* Pods-ChickenAndRiceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ChickenAndRiceTests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		920AC965DB292671F9FF32C305340000 /* Pods-ChickenAndRiceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChickenAndRiceTests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94EEF959AD352EFE5B82E87AF76BE757 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		960C3DBD58C14D505ED0B289ACD4F5F5 /* SocketAckManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckManager.swift; path = Source/SocketIO/Ack/SocketAckManager.swift; sourceTree = "<group>"; };
 		98DCA1DCEAFBE4BF64675DBE525CBB93 /* SocketPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketPacket.swift; path = Source/SocketIO/Parse/SocketPacket.swift; sourceTree = "<group>"; };
 		9A2C142BB99CFBBB279A222C305341C0 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SSLSecurity.swift; sourceTree = "<group>"; };
 		9CB341FE024DB0AC1CBDC9D828110C0B /* Socket.IO-Client-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Socket.IO-Client-Swift-dummy.m"; sourceTree = "<group>"; };
 		9CF988F208779CA240EC22B0CDD59B5D /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SocketIO/Util/SSLSecurity.swift; sourceTree = "<group>"; };
-		A14F91DF96BD6C18CACDFED61439927C /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketIO.framework; path = "Socket.IO-Client-Swift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14F91DF96BD6C18CACDFED61439927C /* SocketIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A486026AD60272AFCCFB883BC991654E /* Pods-ChickenAndRiceTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChickenAndRiceTests-dummy.m"; sourceTree = "<group>"; };
 		AAA7815DD274BE380A2428013D466CC3 /* SocketEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketEngine.swift; path = Source/SocketIO/Engine/SocketEngine.swift; sourceTree = "<group>"; };
-		AB107D7AFE0251734263FA153A06765B /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB107D7AFE0251734263FA153A06765B /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B062D82EE706BC4D187737915E85545B /* SocketIOClientOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketIOClientOption.swift; path = Source/SocketIO/Client/SocketIOClientOption.swift; sourceTree = "<group>"; };
 		B393448758AF3763C35649BD3DA76079 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Source/WebSocket.swift; sourceTree = "<group>"; };
 		B6CAD3375F231CCA835AFCB0EBD4E79F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		EC1366E54FCA286B8CCC584A0CDD7BA1 /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
 		EF86B1CA6FBBDB03FBF074D2EDACE48D /* SocketAckEmitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketAckEmitter.swift; path = Source/SocketIO/Ack/SocketAckEmitter.swift; sourceTree = "<group>"; };
 		F0AC6DEFD6AC56D6D8E6C4E306B7CDA5 /* SocketTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SocketTypes.swift; path = Source/SocketIO/Util/SocketTypes.swift; sourceTree = "<group>"; };
-		FAA871833149294F47FB90C1E1EB224E /* Pods_ChickenAndRiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ChickenAndRiceTests.framework; path = "Pods-ChickenAndRiceTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA871833149294F47FB90C1E1EB224E /* Pods_ChickenAndRiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,7 +303,6 @@
 				B393448758AF3763C35649BD3DA76079 /* WebSocket.swift */,
 				6A22036632212819A3C1C5432965C1C3 /* Support Files */,
 			);
-			name = Starscream;
 			path = Starscream;
 			sourceTree = "<group>";
 		};
@@ -368,7 +367,6 @@
 				9CF988F208779CA240EC22B0CDD59B5D /* SSLSecurity.swift */,
 				CEE11FD9AB912084D19C6466F7EA0C68 /* Support Files */,
 			);
-			name = "Socket.IO-Client-Swift";
 			path = "Socket.IO-Client-Swift";
 			sourceTree = "<group>";
 		};
@@ -525,7 +523,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -721,6 +719,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
