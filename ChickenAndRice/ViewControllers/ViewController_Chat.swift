@@ -57,13 +57,13 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
 
         // This simply allows us to cycle through our images in ./Art
-        var image : UIImage
-        
+        //var image : UIImage
+        /*
         let string0 = "cat"
         let string1 = "send_icon"
         let string2 = "chicken_and_rice"
         let string3 = "chicken"
-        
+ 
         
         // for testing cycle between thumbnails.
         let path0 = Bundle.main.path(forResource: string0, ofType: "png")
@@ -98,6 +98,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
         // We will call this when the user actually selects a thumbnail, not just at the end of this func
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+ */
         
     }
     @IBAction func didTapSend(_ sender: Any) {
@@ -225,7 +226,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     func establishChannelJoinMessageHandling() {
         SocketIOManager.sharedInstance.getChatMessagesForChannel(completionHandler: {
-            (channelMessages) -> Void in
+            (channelMessages) -> Void in DispatchQueue.main.async{() -> Void in
             self.messageModel = channelMessages
             self.chatTableView.reloadData()
 
@@ -233,6 +234,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
                 // scroll to bottom of the tableview but only if we have something to scroll to
                 let indexPath = NSIndexPath(row: self.messageModel.count - 1, section: 0)
                 self.chatTableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: false)
+            }
             }
         })
     }
@@ -246,7 +248,8 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
         chatTableView.rowHeight = UITableViewAutomaticDimension
         chatTableView.estimatedRowHeight = 44
-        chatTableView.separatorStyle = .none   
+        chatTableView.separatorStyle = .none
+        
 
     
         // TODO : THEMES

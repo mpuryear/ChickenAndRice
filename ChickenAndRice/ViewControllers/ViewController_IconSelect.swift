@@ -16,9 +16,8 @@ class ViewController_IconSelect: UIViewController {
     @IBOutlet weak var Chicken_and_riceButton: UIButton!
     @IBOutlet weak var chickenButton: UIButton!
     
-    
-    @IBAction func didTapCat(_ sender: UIButton) {
-        print("didTapCat")
+    @IBAction func didTapCat(_ sender: Any) {
+        print("didTapCatIcon")
         var image : UIImage
         let path = Bundle.main.path(forResource: "cat", ofType: "png")
         
@@ -30,8 +29,63 @@ class ViewController_IconSelect: UIViewController {
         image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
         
         Model_User.current_user.thumbnail = thumbnail
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of send icon")
+    }
+    
+    @IBAction func didTapSend_Icon(_ sender: Any) {
+        print("didTapSendIcon")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "send_icon", ofType: "png")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "send_icon" + ".png")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
         // code breaks here
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of send icon")
+    }
+    
+    @IBAction func didTapChickenAndRice(_ sender: Any) {
+        print("didTapSendIcon")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "chicken_and_rice", ofType: "jpeg")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "chicken_and_rice" + ".jpeg")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
+        // code breaks here
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of chicken and rice")
+    }
+    
+    
+    @IBAction func didTapChicken(_ sender: Any) {
+        print("didTapSendIcon")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "chicken", ofType: "png")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "chicken" + ".png")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
+        // code breaks here
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of chicken")
     }
     
     override func viewDidLoad() {
@@ -59,7 +113,7 @@ class ViewController_IconSelect: UIViewController {
         Chicken_and_riceButton.setBackgroundImage(image3, for: .normal)
         //button 4
         var image4 : UIImage
-        image4 = UIImage(imageLiteralResourceName: "chicken" + ".jpg")
+        image4 = UIImage(imageLiteralResourceName: "chicken" + ".png")
         image4 = resizeImage(image: image4, targetSize: CGSize(width: 32, height: 32))
         
         chickenButton.setTitle("", for: .normal)

@@ -265,37 +265,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-PO-xST">
-                                <rect key="frame" x="58" y="147" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cat"/>
-                                <connections>
-                                    <action selector="didTapCat:" destination="LSU-vZ-MON" eventType="touchUpInside" id="pZ8-sf-yTi"/>
-                                    <action selector="didTapCatIcon:" destination="LSU-vZ-MON" eventType="touchUpInside" id="yEk-mO-aXA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmh-bU-0xA">
                                 <rect key="frame" x="272" y="147" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="send_icon"/>
+                                <connections>
+                                    <action selector="didTapSend_Icon:" destination="LSU-vZ-MON" eventType="touchUpInside" id="h5m-4d-f44"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-iT-3Te">
                                 <rect key="frame" x="272" y="244" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="chicken"/>
+                                <connections>
+                                    <action selector="didTapChicken:" destination="LSU-vZ-MON" eventType="touchUpInside" id="8S4-vA-WyV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooT-al-xSN">
                                 <rect key="frame" x="58" y="244" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="chicken and rice"/>
+                                <connections>
+                                    <action selector="didTapChickenAndRice:" destination="LSU-vZ-MON" eventType="touchUpInside" id="jJB-Ky-Lxo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hea-u7-V47">
+                                <rect key="frame" x="60" y="147" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cat"/>
+                                <connections>
+                                    <action selector="didTapCat:" destination="LSU-vZ-MON" eventType="touchUpInside" id="8Dm-b0-qr6"/>
+                                </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="EAk-Ud-QTm"/>
                     </view>
                     <navigationItem key="navigationItem" id="Wga-rO-yHX"/>
                     <connections>
                         <outlet property="Chicken_and_riceButton" destination="ooT-al-xSN" id="d6U-pK-fO2"/>
-                        <outlet property="catButton" destination="gtd-PO-xST" id="SAe-Rv-21r"/>
+                        <outlet property="catButton" destination="hea-u7-V47" id="rCx-H4-Ye4"/>
                         <outlet property="chickenButton" destination="9Dl-iT-3Te" id="n8n-Yh-q9A"/>
                         <outlet property="send_iconButton" destination="Jmh-bU-0xA" id="65T-LQ-4Xe"/>
                     </connections>
