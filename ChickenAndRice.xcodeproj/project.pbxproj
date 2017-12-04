@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B67534C8F4158CF919D09D6 /* Pods_ChickenAndRiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */; };
 		9E3E2A8C6F7FCDB9AE9AADE0 /* Pods_ChickenAndRiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */; };
+		B1BFD61F1FD511DD0008B77B /* chicken.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B1BFD61E1FD511DD0008B77B /* chicken.jpg */; };
+		B1BFD6251FD533C00008B77B /* ViewController_IconSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BFD6241FD533C00008B77B /* ViewController_IconSelect.swift */; };
 		C106240C1FB1889200500BDC /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = C106240B1FB1889100500BDC /* cat.png */; };
 		C159955E1FB13A3D007E75AC /* TableViewCell_Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */; };
 		C15995601FB13CDB007E75AC /* Model_Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159955F1FB13CDB007E75AC /* Model_Message.swift */; };
@@ -60,6 +62,8 @@
 		96D5571EBFF54366C53A9185 /* Pods-ChickenAndRiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F56DCED9A6F798A053C7587 /* Pods-ChickenAndRiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B1BFD61E1FD511DD0008B77B /* chicken.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chicken.jpg; sourceTree = "<group>"; };
+		B1BFD6241FD533C00008B77B /* ViewController_IconSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_IconSelect.swift; sourceTree = "<group>"; };
 		C106240B1FB1889100500BDC /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell_Chat.swift; sourceTree = "<group>"; };
 		C159955F1FB13CDB007E75AC /* Model_Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_Message.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				C106240B1FB1889100500BDC /* cat.png */,
 				C18CBA431FB1013E00E4ACF8 /* send_icon.png */,
 				C18CBA391FB092B400E4ACF8 /* chicken_and_rice.jpeg */,
+				B1BFD61E1FD511DD0008B77B /* chicken.jpg */,
 			);
 			path = Art;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				C1AC091B1FB7C5D2001DF319 /* ViewController_RegisterUser.swift */,
 				C1AC09221FB88DDC001DF319 /* ViewController_ChannelSelect.swift */,
 				C1D789AE1FB915F60074AB46 /* ViewController_ServerSelect.swift */,
+				B1BFD6241FD533C00008B77B /* ViewController_IconSelect.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				C18CBA0B1FB04FCB00E4ACF8 /* Assets.xcassets in Resources */,
 				C18CBA3A1FB0934C00E4ACF8 /* chicken_and_rice.jpeg in Resources */,
 				C18CBA091FB04FCB00E4ACF8 /* Main.storyboard in Resources */,
+				B1BFD61F1FD511DD0008B77B /* chicken.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +589,7 @@
 				C18CBA041FB04FCB00E4ACF8 /* AppDelegate.swift in Sources */,
 				C1D789B31FB91B3C0074AB46 /* Model_Server.swift in Sources */,
 				C1D789AF1FB915F60074AB46 /* ViewController_ServerSelect.swift in Sources */,
+				B1BFD6251FD533C00008B77B /* ViewController_IconSelect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

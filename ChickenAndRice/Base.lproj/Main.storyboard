@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCm-iL-qeL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bCm-iL-qeL">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,7 +90,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" scrollEnabled="NO" editable="NO" text="USERNAME" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jbm-Kb-NcH">
-                                                    <rect key="frame" x="8" y="0.0" width="97" height="23"/>
+                                                    <rect key="frame" x="8" y="0.0" width="97" height="26"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     </accessibility>
@@ -101,10 +101,10 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="wv3-F5-Hnr">
-                                                    <rect key="frame" x="8" y="58" width="32" height="32"/>
+                                                    <rect key="frame" x="15" y="61" width="32" height="32"/>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-xv-8Rr">
-                                                    <rect key="frame" x="113" y="0.0" width="261" height="71"/>
+                                                    <rect key="frame" x="113" y="0.0" width="254" height="68.666666666666671"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -112,7 +112,7 @@
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                                 </textView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="[11/8/2017, 3:32:18 AM]" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QH1-OM-MQe">
-                                                    <rect key="frame" x="8" y="24" width="97" height="26"/>
+                                                    <rect key="frame" x="8" y="27" width="97" height="26"/>
                                                     <accessibility key="accessibilityConfiguration">
                                                         <accessibilityTraits key="traits" notEnabled="YES"/>
                                                     </accessibility>
@@ -207,6 +207,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapThumbnail:" destination="YvE-p8-3fP" eventType="touchUpInside" id="v01-Go-E18"/>
+                                    <segue destination="LSU-vZ-MON" kind="show" identifier="Segue_ChatToIcon" id="bdP-Ft-wL0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,6 +256,53 @@
                 <exit id="ELN-Td-vzb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="-598.36956521739137"/>
+        </scene>
+        <!--View Controller Icon Select-->
+        <scene sceneID="xrH-3o-lMw">
+            <objects>
+                <viewController id="LSU-vZ-MON" customClass="ViewController_IconSelect" customModule="ChickenAndRice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mJg-6L-55B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtd-PO-xST">
+                                <rect key="frame" x="58" y="147" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cat"/>
+                                <connections>
+                                    <action selector="didTapCat:" destination="LSU-vZ-MON" eventType="touchUpInside" id="pZ8-sf-yTi"/>
+                                    <action selector="didTapCatIcon:" destination="LSU-vZ-MON" eventType="touchUpInside" id="yEk-mO-aXA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmh-bU-0xA">
+                                <rect key="frame" x="272" y="147" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send_icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-iT-3Te">
+                                <rect key="frame" x="272" y="244" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="chicken"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooT-al-xSN">
+                                <rect key="frame" x="58" y="244" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="chicken and rice"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EAk-Ud-QTm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Wga-rO-yHX"/>
+                    <connections>
+                        <outlet property="Chicken_and_riceButton" destination="ooT-al-xSN" id="d6U-pK-fO2"/>
+                        <outlet property="catButton" destination="gtd-PO-xST" id="SAe-Rv-21r"/>
+                        <outlet property="chickenButton" destination="9Dl-iT-3Te" id="n8n-Yh-q9A"/>
+                        <outlet property="send_iconButton" destination="Jmh-bU-0xA" id="65T-LQ-4Xe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNp-dB-hf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3127.536231884058" y="-611.41304347826087"/>
         </scene>
         <!--View Controller Server Select-->
         <scene sceneID="1N1-C8-uIV">
@@ -325,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeR-Lr-nTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2503" y="-1444"/>
+            <point key="canvasLocation" x="2497" y="-1500"/>
         </scene>
         <!--View Controller Channel Select-->
         <scene sceneID="g9q-Ia-kWG">
@@ -388,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewc-55-9E9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3290" y="-1445"/>
+            <point key="canvasLocation" x="3371" y="-1500"/>
         </scene>
         <!--View Controller Register User-->
         <scene sceneID="6i7-lm-mqE">

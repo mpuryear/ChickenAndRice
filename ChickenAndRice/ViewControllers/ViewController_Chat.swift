@@ -62,12 +62,14 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         let string0 = "cat"
         let string1 = "send_icon"
         let string2 = "chicken_and_rice"
+        let string3 = "chicken"
         
         
         // for testing cycle between thumbnails.
         let path0 = Bundle.main.path(forResource: string0, ofType: "png")
         let path1 = Bundle.main.path(forResource: string1, ofType: "png")
         let path2 = Bundle.main.path(forResource: string2, ofType: "jpeg")
+        let path3 = Bundle.main.path(forResource: string3, ofType: "jpg")
         
         var thumbnail : Data
         switch thmbIdx {
@@ -75,10 +77,12 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         image = UIImage(imageLiteralResourceName: string1 + ".png")
         case 2: thumbnail = (NSData.init(contentsOfFile: path2!) as Data?)!
         image = UIImage(imageLiteralResourceName: string2 + ".jpeg")//(UIImage(named: string2) as UIImage?)!
+        case 3: thumbnail = (NSData.init(contentsOfFile: path3!) as Data?)!
+        image = UIImage(imageLiteralResourceName: string3 + ".jpg")
         default: thumbnail = (NSData.init(contentsOfFile: path0!) as Data?)!
         image = UIImage(imageLiteralResourceName: string0 + ".png")
         }
-        thmbIdx = (thmbIdx + 1) % 3
+        thmbIdx = (thmbIdx + 1) % 4
         print("thmbIdx \(thmbIdx)")
         
 
@@ -96,7 +100,6 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
         
     }
-    
     @IBAction func didTapSend(_ sender: Any) {
         print("didTapSend")
         if let text = messageTextField.text, !text.isEmpty {
