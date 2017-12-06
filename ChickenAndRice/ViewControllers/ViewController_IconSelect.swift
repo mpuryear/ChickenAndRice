@@ -16,6 +16,8 @@ class ViewController_IconSelect: UIViewController {
     @IBOutlet weak var Chicken_and_riceButton: UIButton!
     @IBOutlet weak var chickenButton: UIButton!
     
+    @IBOutlet weak var jigglyButton: UIButton!
+    @IBOutlet weak var cakeButton: UIButton!
     @IBAction func didTapCat(_ sender: Any) {
         print("didTapCatIcon")
         var image : UIImage
@@ -87,7 +89,39 @@ class ViewController_IconSelect: UIViewController {
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
         print("got to the end of chicken")
     }
-    
+    @IBAction func didTapJiggly(_ sender: Any) {
+        print("didTapJiggly")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "jiggly", ofType: "png")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "jiggly" + ".png")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of jiggly")
+    }
+    @IBAction func didTapCake(_ sender: Any) {
+        print("didTapCake")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "cake", ofType: "jpg")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "cake" + ".jpg")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
+        // code breaks here
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of cake")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // image 1
@@ -118,7 +152,22 @@ class ViewController_IconSelect: UIViewController {
         
         chickenButton.setTitle("", for: .normal)
         chickenButton.setBackgroundImage(image4, for: .normal)
-        // Do any additional setup after loading the view.
+
+        //image 5
+        var image5 : UIImage
+        image5 = UIImage(imageLiteralResourceName: "jiggly" + ".png")
+        image5 = resizeImage(image: image5, targetSize: CGSize(width: 32, height: 32))
+        
+        jigglyButton.setTitle("", for: .normal)
+        jigglyButton.setBackgroundImage(image5, for: .normal)
+        
+        //image 6
+        var image6 : UIImage
+        image6 = UIImage(imageLiteralResourceName: "cake" + ".jpg")
+        image6 = resizeImage(image: image6, targetSize: CGSize(width: 32, height: 32))
+        
+        cakeButton.setTitle("", for: .normal)
+        cakeButton.setBackgroundImage(image6, for: .normal)
     }
 
     override func didReceiveMemoryWarning() {

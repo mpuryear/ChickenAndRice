@@ -297,6 +297,22 @@
                                     <action selector="didTapCat:" destination="LSU-vZ-MON" eventType="touchUpInside" id="8Dm-b0-qr6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-i3-DLK">
+                                <rect key="frame" x="60" y="325" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="jigg"/>
+                                <connections>
+                                    <action selector="didTapJiggly:" destination="LSU-vZ-MON" eventType="touchUpInside" id="ioc-Dm-pOo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jae-j8-hfU">
+                                <rect key="frame" x="282" y="325" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="  cake"/>
+                                <connections>
+                                    <action selector="didTapCake:" destination="LSU-vZ-MON" eventType="touchUpInside" id="oTz-oN-65k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="EAk-Ud-QTm"/>
@@ -304,8 +320,10 @@
                     <navigationItem key="navigationItem" id="Wga-rO-yHX"/>
                     <connections>
                         <outlet property="Chicken_and_riceButton" destination="ooT-al-xSN" id="d6U-pK-fO2"/>
+                        <outlet property="cakeButton" destination="jae-j8-hfU" id="1Cd-7s-KHx"/>
                         <outlet property="catButton" destination="hea-u7-V47" id="rCx-H4-Ye4"/>
                         <outlet property="chickenButton" destination="9Dl-iT-3Te" id="n8n-Yh-q9A"/>
+                        <outlet property="jigglyButton" destination="uIb-i3-DLK" id="UAl-tT-GqL"/>
                         <outlet property="send_iconButton" destination="Jmh-bU-0xA" id="65T-LQ-4Xe"/>
                     </connections>
                 </viewController>
