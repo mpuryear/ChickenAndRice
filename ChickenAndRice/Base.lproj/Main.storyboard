@@ -274,7 +274,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-iT-3Te">
-                                <rect key="frame" x="272" y="244" width="53" height="30"/>
+                                <rect key="frame" x="272" y="278" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="chicken"/>
                                 <connections>
@@ -282,7 +282,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooT-al-xSN">
-                                <rect key="frame" x="58" y="244" width="40" height="30"/>
+                                <rect key="frame" x="60" y="279" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="chicken and rice"/>
                                 <connections>
@@ -298,7 +298,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-i3-DLK">
-                                <rect key="frame" x="60" y="325" width="34" height="30"/>
+                                <rect key="frame" x="60" y="409" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="jigg"/>
                                 <connections>
@@ -306,11 +306,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jae-j8-hfU">
-                                <rect key="frame" x="282" y="325" width="41" height="30"/>
+                                <rect key="frame" x="278" y="408" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="  cake"/>
                                 <connections>
                                     <action selector="didTapCake:" destination="LSU-vZ-MON" eventType="touchUpInside" id="oTz-oN-65k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7h-g8-kng">
+                                <rect key="frame" x="65" y="523" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="digi"/>
+                                <connections>
+                                    <action selector="didTapDigimon:" destination="LSU-vZ-MON" eventType="touchUpInside" id="MAn-Th-wU5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-Nj-AcP">
+                                <rect key="frame" x="282" y="523" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="beyy"/>
+                                <connections>
+                                    <action selector="didTapBeyblade:" destination="LSU-vZ-MON" eventType="touchUpInside" id="g1S-U5-P7e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -320,9 +336,11 @@
                     <navigationItem key="navigationItem" id="Wga-rO-yHX"/>
                     <connections>
                         <outlet property="Chicken_and_riceButton" destination="ooT-al-xSN" id="d6U-pK-fO2"/>
+                        <outlet property="beybladeButton" destination="aqa-Nj-AcP" id="7iN-0w-vYX"/>
                         <outlet property="cakeButton" destination="jae-j8-hfU" id="1Cd-7s-KHx"/>
                         <outlet property="catButton" destination="hea-u7-V47" id="rCx-H4-Ye4"/>
                         <outlet property="chickenButton" destination="9Dl-iT-3Te" id="n8n-Yh-q9A"/>
+                        <outlet property="digimonButton" destination="u7h-g8-kng" id="SnV-fb-YWV"/>
                         <outlet property="jigglyButton" destination="uIb-i3-DLK" id="UAl-tT-GqL"/>
                         <outlet property="send_iconButton" destination="Jmh-bU-0xA" id="65T-LQ-4Xe"/>
                     </connections>

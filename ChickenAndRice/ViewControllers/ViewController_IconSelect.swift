@@ -18,6 +18,8 @@ class ViewController_IconSelect: UIViewController {
     
     @IBOutlet weak var jigglyButton: UIButton!
     @IBOutlet weak var cakeButton: UIButton!
+    @IBOutlet weak var digimonButton: UIButton!
+    @IBOutlet weak var beybladeButton: UIButton!
     @IBAction func didTapCat(_ sender: Any) {
         print("didTapCatIcon")
         var image : UIImage
@@ -122,6 +124,43 @@ class ViewController_IconSelect: UIViewController {
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
         print("got to the end of cake")
     }
+    
+    @IBAction func didTapDigimon(_ sender: Any) {
+        print("didTapDigimon")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "agumon", ofType: "png")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "agumon" + ".png")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
+        // code breaks here
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of digi")
+    }
+    
+    @IBAction func didTapBeyblade(_ sender: Any) {
+        print("didTapBeyblade")
+        var image : UIImage
+        let path = Bundle.main.path(forResource: "beyblade", ofType: "jpg")
+        
+        var thumbnail : Data
+        // change the thumbnail now
+        thumbnail = (NSData.init(contentsOfFile: path!) as Data?)!
+        image = UIImage(imageLiteralResourceName: "beyblade" + ".jpg")
+        
+        image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
+        
+        Model_User.current_user.thumbnail = thumbnail
+        // code breaks here
+        SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+        print("got to the end of blade")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // image 1
@@ -168,6 +207,24 @@ class ViewController_IconSelect: UIViewController {
         
         cakeButton.setTitle("", for: .normal)
         cakeButton.setBackgroundImage(image6, for: .normal)
+        
+        //image 7
+        var image7 : UIImage
+        image7 = UIImage(imageLiteralResourceName: "agumon" + ".png")
+        image7 = resizeImage(image: image7, targetSize: CGSize(width: 32, height: 32))
+        
+        digimonButton.setTitle("", for: .normal)
+        digimonButton.setBackgroundImage(image7, for: .normal)
+        
+        //image 8
+        var image8 : UIImage
+        image8 = UIImage(imageLiteralResourceName: "beyblade" + ".jpg")
+        image8 = resizeImage(image: image8, targetSize: CGSize(width: 32, height: 32))
+        
+        beybladeButton.setTitle("", for: .normal)
+        beybladeButton.setBackgroundImage(image8, for: .normal)
+
+
     }
 
     override func didReceiveMemoryWarning() {
