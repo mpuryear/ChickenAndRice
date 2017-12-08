@@ -3,11 +3,11 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': '/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules'
+    'name': '/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules'
     'contents': [{
       'type': 'file',
       'name': 'module.modulemap',
-      'external-contents': '/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap',
+      'external-contents': '/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Intermediates/Pods.build/Debug-iphonesimulator/Starscream.build/unextended-module.modulemap',
     }]
   }]
 }
