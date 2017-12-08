@@ -1,0 +1,6 @@
+framework module Pods_ChickenAndRice {
+  umbrella header "Pods-ChickenAndRice-umbrella.h"
+
+  export *
+  module * { export * }
+}

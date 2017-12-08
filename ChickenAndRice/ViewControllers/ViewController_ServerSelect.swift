@@ -10,11 +10,15 @@ import UIKit
 
 import UIKit
 
+
+
 class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UITableViewDelegate {
     
     var servers : [Model_Server] = []
     
     
+    @IBOutlet weak var shareableString: UITextView!
+    @IBOutlet weak var shareableStringTitle: UILabel!
     @IBOutlet weak var serverTableView: UITableView!
     
     @IBOutlet weak var inputTextField: UITextField!
@@ -24,8 +28,10 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         // attempt to join based on connect string
         
         if inputTextField.text == "" {
-            // TODO Alert user there must be text in the field
-
+            
+            let alert = UIAlertController(title: "Alert", message: "Cannot send empty message", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
             return;
         }
@@ -37,8 +43,10 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         // create a new server with name
         
         if inputTextField.text == "" {
-            // TODO Alert user there must be text in the field
             
+            let alert = UIAlertController(title: "Alert", message: "Cannot send empty message", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return;
         }
         
@@ -68,17 +76,18 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         });
         
         SocketIOManager.sharedInstance.failedToJoinServer(completionHandler: { () -> Void in
-            
-            // TODO Alert user that this server doesnt exist via UIALert
-            // see login view controller for example
+            let alert = UIAlertController(title: "Alert", message: "Server does not exist", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
         });
         
     SocketIOManager.sharedInstance.failedToCreateServer(completionHandler: {
             () -> Void in
-        // TODO Alert user that this server doesnt exist via UIALert
-        // see login view controller for example
         
+        let alert = UIAlertController(title: "Alert", message: "Server does not exist", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         });
         
         SocketIOManager.sharedInstance.getChannel(completionHandler: { (channel) -> Void in
@@ -99,6 +108,17 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
            
         })
         // Do any additional setup after loading the view.
+        if Model_User.current_user.theme {
+            self.view.backgroundColor = UIColor.lightGray
+            inputTextField.backgroundColor = UIColor.white
+            serverTableView.backgroundColor = UIColor.lightGray
+            shareableString.backgroundColor = UIColor.white
+        } else {
+            self.view.backgroundColor = UIColor.darkGray
+            inputTextField.backgroundColor = UIColor.lightGray
+            serverTableView.backgroundColor = UIColor.darkGray
+            shareableString.backgroundColor = UIColor.lightGray
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -141,7 +161,7 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         Model_Server.current_server.name = self.servers[indexPath!.row].name
         Model_Server.current_server._id = self.servers[indexPath!.row]._id
         Model_Server.current_server.default_channel = self.servers[indexPath!.row].default_channel
-
+        
         
         SocketIOManager.sharedInstance.joinChannel(username: Model_User.current_user.username, channel_id: Model_Server.current_server.default_channel)
  
@@ -160,6 +180,11 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+        shareableString.text = Model_Server.current_server.shareableLink
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -175,7 +200,16 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "ServerCell", for: indexPath) as! TableViewCell_Server
         
         let currentServer = self.servers[indexPath.row]
-        
+        //Coloring text based on theme.
+        if Model_User.current_user.theme {
+            cell.serverName.textColor = UIColor.black
+            cell.backgroundColor = UIColor.lightGray
+            tableView.backgroundView?.backgroundColor = UIColor.lightGray
+        } else {
+            cell.serverName.textColor = UIColor.white
+            cell.backgroundColor = UIColor.darkGray
+            tableView.backgroundView?.backgroundColor = UIColor.darkGray
+        }
         
         // Color the user name if it is the current user
         

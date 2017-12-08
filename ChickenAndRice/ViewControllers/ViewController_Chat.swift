@@ -25,10 +25,35 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var chatTableView: UITableView!
     
     
+    @IBOutlet weak var dayThemeButton: UIButton!
+    @IBOutlet weak var nightThemeButton: UIButton!
+    
+    
     @IBOutlet weak var messageTextField: UITextField!
     
-  
-    @IBOutlet weak var shareableStringTextView: UITextView!
+    
+    @IBAction func didTapDayTheme(_ sender: UIButton) {
+        dayThemeButton.isHidden = true
+        nightThemeButton.isHidden = false
+        Model_User.current_user.theme = true
+        messageTextField.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.lightGray
+        
+        self.chatTableView.reloadData()
+        
+    }
+    
+    
+    @IBAction func didTapNightTheme(_ sender: UIButton) {
+        nightThemeButton.isHidden = true
+        dayThemeButton.isHidden = false
+        Model_User.current_user.theme = false
+        messageTextField.backgroundColor = UIColor.lightGray
+        self.view.backgroundColor = UIColor.darkGray
+        
+        self.chatTableView.reloadData()
+    }
+    
     
     @IBOutlet weak var serverSelectButton: UIButton!
     
@@ -245,14 +270,20 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         chatTableView.estimatedRowHeight = 44
         chatTableView.separatorStyle = .none   
 
-    
+        
         // TODO : THEMES
         if Model_User.current_user.theme {
-            // white bg black text
-            
+            dayThemeButton.isHidden = true
+            nightThemeButton.isHidden = false
+            messageTextField.backgroundColor = UIColor.white
+            self.view.backgroundColor = UIColor.lightGray
+            chatTableView.backgroundColor = UIColor.lightGray
         } else {
-            // dark theme. black bg white text
-            
+            nightThemeButton.isHidden = true
+            dayThemeButton.isHidden = false
+            messageTextField.backgroundColor = UIColor.lightGray
+            self.view.backgroundColor = UIColor.darkGray
+            chatTableView.backgroundColor = UIColor.darkGray
         }
         
         
@@ -268,8 +299,9 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "general")
         Model_Channel.current_channel._id = "5a06f87aa551eb6a1c6b9057" // default channel id
         
+        serverSelectButton.setTitle("Server Select", for: .normal)
+        channelSelectButton.setTitle("Channel Select", for: .normal)
         
-        //SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
    
         
         ViewController_Chat.hasLoaded = true
@@ -279,10 +311,10 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         print("view appeared: chat : model channel current name: \(Model_Channel.current_channel.name)")
     
-        serverSelectButton.setTitle(Model_Server.current_server.name, for: .normal)
-        channelSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
+        //serverSelectButton.setTitle(Model_Server.current_server.name, for: .normal)
+        //channelSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
 
-        shareableStringTextView.text = Model_Server.current_server.shareableLink
+        //shareableStringTextView.text = Model_Server.current_server.shareableLink
   
         
         // requeest messages for current channel.
@@ -346,15 +378,36 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
      let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! TableViewCell_Chat
    
         let currentMessage = self.messageModel[indexPath.row]
-        
-        
-        // Color the user name if it is the current user
         let attribString = NSMutableAttributedString(string: currentMessage.username, attributes: .none)
-     
+    
+        //Coloring text based on theme.
+        if Model_User.current_user.theme {
+            cell.messageTextView.textColor = UIColor.black
+            cell.backgroundColor = UIColor.lightGray
+            cell.messageTextView.backgroundColor = UIColor.lightGray
+            cell.contentView.backgroundColor = UIColor.lightGray
+            cell.dateTextView.textColor = UIColor.black
+            //cell.usernameTextView.textColor = UIColor.black
+            
+            let range = (currentMessage.username as NSString).range(of: currentMessage.username)
+            attribString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.black, range: range)
+        } else {
+            cell.messageTextView.textColor = UIColor.white
+            cell.backgroundColor = UIColor.darkGray
+            cell.messageTextView.backgroundColor = UIColor.darkGray
+            cell.contentView.backgroundColor = UIColor.darkGray
+            cell.dateTextView.textColor = UIColor.white
+            //cell.usernameTextView = UIColor.white
+            
+            let range = (currentMessage.username as NSString).range(of: currentMessage.username)
+            attribString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.white, range: range)
+        }
+        
         if currentMessage.username == Model_User.current_user.username {
             let range = (currentMessage.username as NSString).range(of: currentMessage.username)
             attribString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: range)
         }
+        
         
         // add our text to our views
         cell.dateTextView?.text = currentMessage.dateTime
@@ -362,6 +415,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         cell.messageTextView?.text = currentMessage.message
         cell.thumbnail.image = UIImage(data: currentMessage.thumbnail!)
         cell.thumbnail.image = resizeImage(image: cell.thumbnail.image!, targetSize: CGSize(width: 32, height: 32))
+        
         
         
         return cell

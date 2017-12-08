@@ -1,0 +1,723 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "SocketIOManager"
+provides-nominal:
+- "14ChickenAndRice15SocketIOManagerC"
+provides-member:
+- ["14ChickenAndRice15SocketIOManagerC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "=="
+- !private "AnyObject"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "Bundle"
+- !private "CastingPrecedence"
+- "Data"
+- !private "Int"
+- "Model_Channel"
+- "Model_Message"
+- "Model_Server"
+- !private "Model_User"
+- !private "NSData"
+- !private "NSDictionary"
+- "NSObject"
+- !private "SocketIO"
+- "SocketIOClient"
+- !private "SocketIOClientStatus"
+- "SocketIOManager"
+- "String"
+- "StringLiteralType"
+- !private "UInt8"
+- "URL"
+- "UnicodeScalarType"
+- "Void"
+- !private "print"
+- !private "||"
+depends-member:
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "subscript"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So6BundleC", "main"]
+- !private ["So6BundleC", "path"]
+- !private ["s7CVarArgP", "Bundle"]
+- !private ["s7CVarArgP", "Model_Channel"]
+- !private ["s7CVarArgP", "Model_Message"]
+- !private ["s7CVarArgP", "Model_Server"]
+- !private ["s7CVarArgP", "Model_User"]
+- !private ["s7CVarArgP", "NSData"]
+- ["s7CVarArgP", "SocketIOClient"]
+- !private ["s7CVarArgP", "SocketIOClientStatus"]
+- ["s7CVarArgP", "SocketIOManager"]
+- ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "changeUserThumbnail"]
+- !private ["s7CVarArgP", "connect"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "current_user"]
+- !private ["s7CVarArgP", "dateTime"]
+- !private ["s7CVarArgP", "disconnect"]
+- !private ["s7CVarArgP", "emit"]
+- !private ["s7CVarArgP", "event"]
+- !private ["s7CVarArgP", "forceNew"]
+- !private ["s7CVarArgP", "hasDisconnected"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "message"]
+- !private ["s7CVarArgP", "on"]
+- !private ["s7CVarArgP", "onAny"]
+- !private ["s7CVarArgP", "path"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reconnect"]
+- !private ["s7CVarArgP", "reconnects"]
+- !private ["s7CVarArgP", "socket"]
+- !private ["s7CVarArgP", "status"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "thumbnail"]
+- !private ["s7CVarArgP", "username"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "count"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Bundle"]
+- !private ["s28CustomDebugStringConvertibleP", "Model_Channel"]
+- !private ["s28CustomDebugStringConvertibleP", "Model_Message"]
+- !private ["s28CustomDebugStringConvertibleP", "Model_Server"]
+- !private ["s28CustomDebugStringConvertibleP", "Model_User"]
+- !private ["s28CustomDebugStringConvertibleP", "NSData"]
+- ["s28CustomDebugStringConvertibleP", "SocketIOClient"]
+- !private ["s28CustomDebugStringConvertibleP", "SocketIOClientStatus"]
+- ["s28CustomDebugStringConvertibleP", "SocketIOManager"]
+- ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "changeUserThumbnail"]
+- !private ["s28CustomDebugStringConvertibleP", "connect"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "current_user"]
+- !private ["s28CustomDebugStringConvertibleP", "dateTime"]
+- !private ["s28CustomDebugStringConvertibleP", "disconnect"]
+- !private ["s28CustomDebugStringConvertibleP", "emit"]
+- !private ["s28CustomDebugStringConvertibleP", "event"]
+- !private ["s28CustomDebugStringConvertibleP", "forceNew"]
+- !private ["s28CustomDebugStringConvertibleP", "hasDisconnected"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "message"]
+- !private ["s28CustomDebugStringConvertibleP", "on"]
+- !private ["s28CustomDebugStringConvertibleP", "onAny"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reconnect"]
+- !private ["s28CustomDebugStringConvertibleP", "reconnects"]
+- !private ["s28CustomDebugStringConvertibleP", "socket"]
+- !private ["s28CustomDebugStringConvertibleP", "status"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "thumbnail"]
+- !private ["s28CustomDebugStringConvertibleP", "username"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "Bundle"]
+- !private ["s23CustomStringConvertibleP", "Model_Channel"]
+- !private ["s23CustomStringConvertibleP", "Model_Message"]
+- !private ["s23CustomStringConvertibleP", "Model_Server"]
+- !private ["s23CustomStringConvertibleP", "Model_User"]
+- !private ["s23CustomStringConvertibleP", "NSData"]
+- ["s23CustomStringConvertibleP", "SocketIOClient"]
+- !private ["s23CustomStringConvertibleP", "SocketIOClientStatus"]
+- ["s23CustomStringConvertibleP", "SocketIOManager"]
+- ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "changeUserThumbnail"]
+- !private ["s23CustomStringConvertibleP", "connect"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "current_user"]
+- !private ["s23CustomStringConvertibleP", "dateTime"]
+- !private ["s23CustomStringConvertibleP", "disconnect"]
+- !private ["s23CustomStringConvertibleP", "emit"]
+- !private ["s23CustomStringConvertibleP", "event"]
+- !private ["s23CustomStringConvertibleP", "forceNew"]
+- !private ["s23CustomStringConvertibleP", "hasDisconnected"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "message"]
+- !private ["s23CustomStringConvertibleP", "on"]
+- !private ["s23CustomStringConvertibleP", "onAny"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reconnect"]
+- !private ["s23CustomStringConvertibleP", "reconnects"]
+- !private ["s23CustomStringConvertibleP", "socket"]
+- !private ["s23CustomStringConvertibleP", "status"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "thumbnail"]
+- !private ["s23CustomStringConvertibleP", "username"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "count"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "count"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "Bundle"]
+- !private ["s9EquatableP", "Model_Channel"]
+- !private ["s9EquatableP", "Model_Message"]
+- !private ["s9EquatableP", "Model_Server"]
+- !private ["s9EquatableP", "Model_User"]
+- !private ["s9EquatableP", "NSData"]
+- ["s9EquatableP", "SocketIOClient"]
+- !private ["s9EquatableP", "SocketIOClientStatus"]
+- ["s9EquatableP", "SocketIOManager"]
+- ["s9EquatableP", "URL"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "changeUserThumbnail"]
+- !private ["s9EquatableP", "connect"]
+- !private ["s9EquatableP", "connected"]
+- !private ["s9EquatableP", "connecting"]
+- !private ["s9EquatableP", "current_user"]
+- !private ["s9EquatableP", "dateTime"]
+- !private ["s9EquatableP", "disconnect"]
+- !private ["s9EquatableP", "disconnected"]
+- !private ["s9EquatableP", "emit"]
+- !private ["s9EquatableP", "event"]
+- !private ["s9EquatableP", "forceNew"]
+- !private ["s9EquatableP", "hasDisconnected"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "message"]
+- !private ["s9EquatableP", "notConnected"]
+- !private ["s9EquatableP", "on"]
+- !private ["s9EquatableP", "onAny"]
+- !private ["s9EquatableP", "path"]
+- !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "reconnect"]
+- !private ["s9EquatableP", "reconnects"]
+- !private ["s9EquatableP", "socket"]
+- !private ["s9EquatableP", "status"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "thumbnail"]
+- !private ["s9EquatableP", "username"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Bundle"]
+- !private ["s8HashableP", "Model_Channel"]
+- !private ["s8HashableP", "Model_Message"]
+- !private ["s8HashableP", "Model_Server"]
+- !private ["s8HashableP", "Model_User"]
+- !private ["s8HashableP", "NSData"]
+- ["s8HashableP", "SocketIOClient"]
+- !private ["s8HashableP", "SocketIOClientStatus"]
+- ["s8HashableP", "SocketIOManager"]
+- ["s8HashableP", "URL"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "changeUserThumbnail"]
+- !private ["s8HashableP", "connect"]
+- !private ["s8HashableP", "connected"]
+- !private ["s8HashableP", "connecting"]
+- !private ["s8HashableP", "current_user"]
+- !private ["s8HashableP", "dateTime"]
+- !private ["s8HashableP", "disconnect"]
+- !private ["s8HashableP", "disconnected"]
+- !private ["s8HashableP", "emit"]
+- !private ["s8HashableP", "event"]
+- !private ["s8HashableP", "forceNew"]
+- !private ["s8HashableP", "hasDisconnected"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "message"]
+- !private ["s8HashableP", "notConnected"]
+- !private ["s8HashableP", "on"]
+- !private ["s8HashableP", "onAny"]
+- !private ["s8HashableP", "path"]
+- !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "reconnect"]
+- !private ["s8HashableP", "reconnects"]
+- !private ["s8HashableP", "socket"]
+- !private ["s8HashableP", "status"]
+- !private ["s8HashableP", "subscript"]
+- !private ["s8HashableP", "thumbnail"]
+- !private ["s8HashableP", "username"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["14ChickenAndRice13Model_ChannelC", "init"]
+- !private ["14ChickenAndRice13Model_MessageC", "dateTime"]
+- !private ["14ChickenAndRice13Model_MessageC", "init"]
+- !private ["14ChickenAndRice13Model_MessageC", "message"]
+- !private ["14ChickenAndRice13Model_MessageC", "thumbnail"]
+- !private ["14ChickenAndRice13Model_MessageC", "username"]
+- !private ["14ChickenAndRice12Model_ServerC", "init"]
+- !private ["14ChickenAndRice10Model_UserC", "current_user"]
+- !private ["14ChickenAndRice10Model_UserC", "username"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "subscript"]
+- ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "subscript"]
+- ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "subscript"]
+- !private ["So6NSDataC", "init"]
+- !private ["So12NSDictionaryC", "subscript"]
+- !private ["So17NSFastEnumerationP", "subscript"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "subscript"]
+- !private ["So8NSObjectC", "AnyObject"]
+- !private ["So8NSObjectC", "Array"]
+- ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "Bundle"]
+- ["So8NSObjectC", "Data"]
+- !private ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "Model_Channel"]
+- ["So8NSObjectC", "Model_Message"]
+- ["So8NSObjectC", "Model_Server"]
+- !private ["So8NSObjectC", "Model_User"]
+- !private ["So8NSObjectC", "NSData"]
+- !private ["So8NSObjectC", "NSDictionary"]
+- !private ["So8NSObjectC", "SocketIO"]
+- ["So8NSObjectC", "SocketIOClient"]
+- !private ["So8NSObjectC", "SocketIOClientStatus"]
+- ["So8NSObjectC", "SocketIOManager"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UInt8"]
+- ["So8NSObjectC", "URL"]
+- ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", "attemptRegisterUser"]
+- ["So8NSObjectC", "changeUserThumbnail"]
+- ["So8NSObjectC", "channelCreated"]
+- ["So8NSObjectC", "closeConnection"]
+- !private ["So8NSObjectC", "connect"]
+- ["So8NSObjectC", "connectToServer"]
+- ["So8NSObjectC", "createChannel"]
+- ["So8NSObjectC", "createServer"]
+- !private ["So8NSObjectC", "current_user"]
+- !private ["So8NSObjectC", "dateTime"]
+- !private ["So8NSObjectC", "disconnect"]
+- ["So8NSObjectC", "disconnectHandler"]
+- !private ["So8NSObjectC", "emit"]
+- ["So8NSObjectC", "establishConnection"]
+- !private ["So8NSObjectC", "event"]
+- ["So8NSObjectC", "failedToCreateChannel"]
+- ["So8NSObjectC", "failedToCreateServer"]
+- ["So8NSObjectC", "failedToJoinServer"]
+- !private ["So8NSObjectC", "forceNew"]
+- ["So8NSObjectC", "getChannel"]
+- ["So8NSObjectC", "getChatMessage"]
+- ["So8NSObjectC", "getChatMessagesForChannel"]
+- ["So8NSObjectC", "getServer"]
+- ["So8NSObjectC", "hasDisconnected"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "invalidLogin"]
+- ["So8NSObjectC", "joinChannel"]
+- ["So8NSObjectC", "leaveChannel"]
+- ["So8NSObjectC", "loginAuthenticated"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "message"]
+- !private ["So8NSObjectC", "on"]
+- ["So8NSObjectC", "onAny"]
+- !private ["So8NSObjectC", "path"]
+- !private ["So8NSObjectC", "print"]
+- ["So8NSObjectC", "reconnect"]
+- !private ["So8NSObjectC", "reconnects"]
+- ["So8NSObjectC", "requestChannelsOfServer"]
+- ["So8NSObjectC", "requestMessagesByChannelId"]
+- ["So8NSObjectC", "requestSubscribedServers"]
+- ["So8NSObjectC", "sendMessage"]
+- ["So8NSObjectC", "serverCreated"]
+- ["So8NSObjectC", "serverSubscribeSuccess"]
+- ["So8NSObjectC", "sharedInstance"]
+- ["So8NSObjectC", "socket"]
+- !private ["So8NSObjectC", "status"]
+- ["So8NSObjectC", "statusChangeHandler"]
+- ["So8NSObjectC", "subscribeToServer"]
+- !private ["So8NSObjectC", "subscript"]
+- !private ["So8NSObjectC", "thumbnail"]
+- ["So8NSObjectC", "user_created"]
+- !private ["So8NSObjectC", "username"]
+- ["So8NSObjectC", "username_taken"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "Bundle"]
+- !private ["So16NSObjectProtocolP", "Model_Channel"]
+- !private ["So16NSObjectProtocolP", "Model_Message"]
+- !private ["So16NSObjectProtocolP", "Model_Server"]
+- !private ["So16NSObjectProtocolP", "Model_User"]
+- !private ["So16NSObjectProtocolP", "NSData"]
+- ["So16NSObjectProtocolP", "SocketIOClient"]
+- !private ["So16NSObjectProtocolP", "SocketIOClientStatus"]
+- ["So16NSObjectProtocolP", "SocketIOManager"]
+- ["So16NSObjectProtocolP", "URL"]
+- !private ["So16NSObjectProtocolP", "changeUserThumbnail"]
+- !private ["So16NSObjectProtocolP", "connect"]
+- !private ["So16NSObjectProtocolP", "current_user"]
+- !private ["So16NSObjectProtocolP", "dateTime"]
+- !private ["So16NSObjectProtocolP", "disconnect"]
+- !private ["So16NSObjectProtocolP", "emit"]
+- !private ["So16NSObjectProtocolP", "event"]
+- !private ["So16NSObjectProtocolP", "forceNew"]
+- !private ["So16NSObjectProtocolP", "hasDisconnected"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "main"]
+- !private ["So16NSObjectProtocolP", "message"]
+- !private ["So16NSObjectProtocolP", "on"]
+- !private ["So16NSObjectProtocolP", "onAny"]
+- !private ["So16NSObjectProtocolP", "path"]
+- !private ["So16NSObjectProtocolP", "print"]
+- !private ["So16NSObjectProtocolP", "reconnect"]
+- !private ["So16NSObjectProtocolP", "reconnects"]
+- !private ["So16NSObjectProtocolP", "socket"]
+- !private ["So16NSObjectProtocolP", "status"]
+- !private ["So16NSObjectProtocolP", "subscript"]
+- !private ["So16NSObjectProtocolP", "thumbnail"]
+- !private ["So16NSObjectProtocolP", "username"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "subscript"]
+- ["So8NSStringC", "init"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "connected"]
+- !private ["s16RawRepresentableP", "connecting"]
+- !private ["s16RawRepresentableP", "disconnected"]
+- !private ["s16RawRepresentableP", "notConnected"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "count"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["8SocketIO0A8AnyEventC", "event"]
+- !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
+- !private ["8SocketIO0A4DataP", "append"]
+- !private ["8SocketIO0A4DataP", "count"]
+- ["8SocketIO0A4DataP", "init"]
+- !private ["8SocketIO0A4DataP", "subscript"]
+- !private ["8SocketIO0A12EngineClientP", "connect"]
+- !private ["8SocketIO0A12EngineClientP", "disconnect"]
+- !private ["8SocketIO0A12EngineClientP", "emit"]
+- !private ["8SocketIO0A12EngineClientP", "forceNew"]
+- ["8SocketIO0A12EngineClientP", "init"]
+- !private ["8SocketIO0A12EngineClientP", "on"]
+- !private ["8SocketIO0A12EngineClientP", "onAny"]
+- !private ["8SocketIO0A12EngineClientP", "reconnect"]
+- !private ["8SocketIO0A12EngineClientP", "reconnects"]
+- !private ["8SocketIO0A12EngineClientP", "status"]
+- !private ["8SocketIO0A8IOClientC", "connect"]
+- !private ["8SocketIO0A8IOClientC", "disconnect"]
+- !private ["8SocketIO0A8IOClientC", "emit"]
+- !private ["8SocketIO0A8IOClientC", "forceNew"]
+- ["8SocketIO0A8IOClientC", "init"]
+- !private ["8SocketIO0A8IOClientC", "on"]
+- !private ["8SocketIO0A8IOClientC", "onAny"]
+- !private ["8SocketIO0A8IOClientC", "reconnect"]
+- !private ["8SocketIO0A8IOClientC", "reconnects"]
+- !private ["8SocketIO0A8IOClientC", "status"]
+- !private ["8SocketIO0A12IOClientSpecP", "connect"]
+- !private ["8SocketIO0A12IOClientSpecP", "disconnect"]
+- !private ["8SocketIO0A12IOClientSpecP", "emit"]
+- !private ["8SocketIO0A12IOClientSpecP", "forceNew"]
+- ["8SocketIO0A12IOClientSpecP", "init"]
+- !private ["8SocketIO0A12IOClientSpecP", "on"]
+- !private ["8SocketIO0A12IOClientSpecP", "onAny"]
+- !private ["8SocketIO0A12IOClientSpecP", "reconnect"]
+- !private ["8SocketIO0A12IOClientSpecP", "reconnects"]
+- !private ["8SocketIO0A12IOClientSpecP", "status"]
+- !private ["8SocketIO0A14IOClientStatusO", "connected"]
+- !private ["8SocketIO0A14IOClientStatusO", "connecting"]
+- !private ["8SocketIO0A14IOClientStatusO", "disconnected"]
+- !private ["8SocketIO0A14IOClientStatusO", "notConnected"]
+- !private ["8SocketIO0A14IOClientStatusO", "rawValue"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "AnyObject"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "Array"]
+- ["14ChickenAndRice15SocketIOManagerC", "Bool"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "Bundle"]
+- ["14ChickenAndRice15SocketIOManagerC", "Data"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "Int"]
+- ["14ChickenAndRice15SocketIOManagerC", "Model_Channel"]
+- ["14ChickenAndRice15SocketIOManagerC", "Model_Message"]
+- ["14ChickenAndRice15SocketIOManagerC", "Model_Server"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "Model_User"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "NSData"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "NSDictionary"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "SocketIO"]
+- ["14ChickenAndRice15SocketIOManagerC", "SocketIOClient"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "SocketIOClientStatus"]
+- ["14ChickenAndRice15SocketIOManagerC", "SocketIOManager"]
+- ["14ChickenAndRice15SocketIOManagerC", "String"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "UInt8"]
+- ["14ChickenAndRice15SocketIOManagerC", "URL"]
+- ["14ChickenAndRice15SocketIOManagerC", "Void"]
+- ["14ChickenAndRice15SocketIOManagerC", "attemptRegisterUser"]
+- ["14ChickenAndRice15SocketIOManagerC", "changeUserThumbnail"]
+- ["14ChickenAndRice15SocketIOManagerC", "channelCreated"]
+- ["14ChickenAndRice15SocketIOManagerC", "closeConnection"]
+- ["14ChickenAndRice15SocketIOManagerC", "connectToServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "createChannel"]
+- ["14ChickenAndRice15SocketIOManagerC", "createServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "deinit"]
+- ["14ChickenAndRice15SocketIOManagerC", "disconnectHandler"]
+- ["14ChickenAndRice15SocketIOManagerC", "establishConnection"]
+- ["14ChickenAndRice15SocketIOManagerC", "failedToCreateChannel"]
+- ["14ChickenAndRice15SocketIOManagerC", "failedToCreateServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "failedToJoinServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "getChannel"]
+- ["14ChickenAndRice15SocketIOManagerC", "getChatMessage"]
+- ["14ChickenAndRice15SocketIOManagerC", "getChatMessagesForChannel"]
+- ["14ChickenAndRice15SocketIOManagerC", "getServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "hasDisconnected"]
+- ["14ChickenAndRice15SocketIOManagerC", "init"]
+- ["14ChickenAndRice15SocketIOManagerC", "invalidLogin"]
+- ["14ChickenAndRice15SocketIOManagerC", "joinChannel"]
+- ["14ChickenAndRice15SocketIOManagerC", "leaveChannel"]
+- ["14ChickenAndRice15SocketIOManagerC", "loginAuthenticated"]
+- ["14ChickenAndRice15SocketIOManagerC", "onAny"]
+- !private ["14ChickenAndRice15SocketIOManagerC", "print"]
+- ["14ChickenAndRice15SocketIOManagerC", "reconnect"]
+- ["14ChickenAndRice15SocketIOManagerC", "requestChannelsOfServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "requestMessagesByChannelId"]
+- ["14ChickenAndRice15SocketIOManagerC", "requestSubscribedServers"]
+- ["14ChickenAndRice15SocketIOManagerC", "sendMessage"]
+- ["14ChickenAndRice15SocketIOManagerC", "serverCreated"]
+- ["14ChickenAndRice15SocketIOManagerC", "serverSubscribeSuccess"]
+- ["14ChickenAndRice15SocketIOManagerC", "sharedInstance"]
+- ["14ChickenAndRice15SocketIOManagerC", "socket"]
+- ["14ChickenAndRice15SocketIOManagerC", "statusChangeHandler"]
+- ["14ChickenAndRice15SocketIOManagerC", "subscribeToServer"]
+- ["14ChickenAndRice15SocketIOManagerC", "user_created"]
+- ["14ChickenAndRice15SocketIOManagerC", "username_taken"]
+- !private ["8SocketIO0A8ParsableP", "connect"]
+- !private ["8SocketIO0A8ParsableP", "disconnect"]
+- !private ["8SocketIO0A8ParsableP", "emit"]
+- !private ["8SocketIO0A8ParsableP", "forceNew"]
+- ["8SocketIO0A8ParsableP", "init"]
+- !private ["8SocketIO0A8ParsableP", "on"]
+- !private ["8SocketIO0A8ParsableP", "onAny"]
+- !private ["8SocketIO0A8ParsableP", "reconnect"]
+- !private ["8SocketIO0A8ParsableP", "reconnects"]
+- !private ["8SocketIO0A8ParsableP", "status"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["10Foundation3URLV", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s34_ExpressibleByFileReferenceLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- !private ["s10_IndexableP", "count"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "append"]
+- !private ["s14_IndexableBaseP", "count"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Bundle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Model_Channel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Model_Message"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Model_Server"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Model_User"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSData"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "SocketIOClient"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "SocketIOClientStatus"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "SocketIOManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "changeUserThumbnail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "connect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current_user"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dateTime"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "disconnect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "emit"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "event"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "forceNew"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasDisconnected"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "message"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "on"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "onAny"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "path"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reconnect"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reconnects"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "socket"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "status"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "thumbnail"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "username"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "subscript"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "subscript"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "Sa"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So6BundleC"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- !private "s10DictionaryV"
+- "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- !private "14ChickenAndRice13Model_ChannelC"
+- !private "14ChickenAndRice13Model_MessageC"
+- !private "14ChickenAndRice12Model_ServerC"
+- !private "14ChickenAndRice10Model_UserC"
+- !private "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So6NSDataC"
+- !private "So12NSDictionaryC"
+- !private "So17NSFastEnumerationP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- !private "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- "10Foundation20ReferenceConvertibleP"
+- "s8SequenceP"
+- !private "8SocketIO0A8AnyEventC"
+- "8SocketIO0A4DataP"
+- "8SocketIO0A12EngineClientP"
+- "8SocketIO0A8IOClientC"
+- "8SocketIO0A12IOClientSpecP"
+- !private "8SocketIO0A14IOClientStatusO"
+- "14ChickenAndRice15SocketIOManagerC"
+- "8SocketIO0A8ParsableP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "10Foundation3URLV"
+- !private "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s34_ExpressibleByFileReferenceLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/SocketIO.swiftmodule/x86_64.swiftmodule"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/Starscream.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-umbrella.h"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/Socket.IO-Client-Swift-umbrella.h"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/SocketIO-Swift.h"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-Swift.h"
+- "/Users/student/Desktop/ChickenAndRice/Pods/Starscream/zlib/module.modulemap"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/module.modulemap"
+- "/Users/student/Desktop/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+interface-hash: "3844cfbd5c2397c2bb7f8599b4d7a7b3"

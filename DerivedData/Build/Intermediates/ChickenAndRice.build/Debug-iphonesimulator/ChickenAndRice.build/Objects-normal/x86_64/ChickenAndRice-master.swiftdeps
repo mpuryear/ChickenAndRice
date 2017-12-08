@@ -1,0 +1,18 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
+options: "7af40e1f2ab180245de3a42aadb371b3"
+build_time: [1512424167, 919311000]
+inputs:
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Models/Model_Channel.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/ViewControllers/ViewController_Login.swift": [1512421433, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Models/Model_User.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/ViewControllers/ViewController_ChannelSelect.swift": [1512422499, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/ViewControllers/ViewController_RegisterUser.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/SocketIO/SocketIOManager.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Models/Model_Message.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Views/TableViewCell_Chat.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Views/TableViewCell_Channel.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Views/TableViewCell_Server.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/ViewControllers/ViewController_Chat.swift": [1512424167, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/AppDelegate.swift": [1512415406, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/Models/Model_Server.swift": [1512415407, 0]
+  "/Users/student/Desktop/ChickenAndRice/ChickenAndRice/ViewControllers/ViewController_ServerSelect.swift": [1512422499, 0]
