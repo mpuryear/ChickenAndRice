@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "295c3067a5a05384b1c5b5ccffa7c1f7"
+build_time: [1512784137, 55531000]
+inputs:
+  "/Users/student/Desktop/FinalProject/ChickenAndRice/Pods/Starscream/Source/Compression.swift": [1512424632, 0]
+  "/Users/student/Desktop/FinalProject/ChickenAndRice/Pods/Starscream/Source/SSLSecurity.swift": [1512424632, 0]
+  "/Users/student/Desktop/FinalProject/ChickenAndRice/Pods/Starscream/Source/WebSocket.swift": [1512424632, 0]
