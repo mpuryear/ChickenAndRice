@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -114,6 +114,7 @@
                                 </state>
                                 <connections>
                                     <action selector="didTapThumbnail:" destination="YvE-p8-3fP" eventType="touchUpInside" id="v01-Go-E18"/>
+                                    <segue destination="PIQ-9T-IVz" kind="show" identifier="Segue_ChatToIcon" id="iud-0X-RpR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It2-Fk-4Bi" userLabel="Channel Select Button">
@@ -263,6 +264,97 @@
                 <exit id="ELN-Td-vzb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="-598.36956521739137"/>
+        </scene>
+        <!--View Controller Icon Select-->
+        <scene sceneID="QXg-ba-MKP">
+            <objects>
+                <viewController id="PIQ-9T-IVz" customClass="ViewController_IconSelect" customModule="ChickenAndRice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oGw-gP-ERg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwS-Qi-WfP">
+                                <rect key="frame" x="44" y="113" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapCat:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="rzQ-MO-4ts"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpw-r8-ANX">
+                                <rect key="frame" x="292" y="113" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapSend_Icon:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="yUU-gp-1F7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNN-KC-2tD">
+                                <rect key="frame" x="44" y="249" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapChickenAndRice:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="wTx-SV-qfv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5B0-hj-UYU">
+                                <rect key="frame" x="292" y="249" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapChicken:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="hzP-Ej-A4e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEA-yz-BCg">
+                                <rect key="frame" x="44" y="393" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapJiggly:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="l3e-p0-gor"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zm7-Zd-4B8">
+                                <rect key="frame" x="292" y="393" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapCake:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="ENY-lu-2uJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbV-ww-jOL">
+                                <rect key="frame" x="44" y="519" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapDigimon:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="2wf-TO-HEP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZk-cl-mEB">
+                                <rect key="frame" x="292" y="519" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapBeyblade:" destination="PIQ-9T-IVz" eventType="touchUpInside" id="SDp-RC-YOW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="zZa-Q6-UIZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="Chicken_and_riceButton" destination="PNN-KC-2tD" id="Phn-eZ-sez"/>
+                        <outlet property="beybladeButton" destination="CZk-cl-mEB" id="4sw-lJ-doW"/>
+                        <outlet property="cakeButton" destination="zm7-Zd-4B8" id="hAv-vV-EXi"/>
+                        <outlet property="catButton" destination="hwS-Qi-WfP" id="eyZ-cD-fJz"/>
+                        <outlet property="chickenButton" destination="5B0-hj-UYU" id="FIA-31-25y"/>
+                        <outlet property="digimonButton" destination="ZbV-ww-jOL" id="Dz7-z4-IPl"/>
+                        <outlet property="jigglyButton" destination="pEA-yz-BCg" id="p3o-b4-5fm"/>
+                        <outlet property="send_iconButton" destination="Rpw-r8-ANX" id="unr-BJ-ux5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2t-p7-S1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3262" y="-621"/>
         </scene>
         <!--View Controller Server Select-->
         <scene sceneID="1N1-C8-uIV">

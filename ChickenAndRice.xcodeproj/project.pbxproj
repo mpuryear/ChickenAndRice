@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1830A21FDB7FFA00734FFA /* ViewController_IconSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1830A11FDB7FFA00734FFA /* ViewController_IconSelect.swift */; };
 		8B67534C8F4158CF919D09D6 /* Pods_ChickenAndRiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */; };
 		9E3E2A8C6F7FCDB9AE9AADE0 /* Pods_ChickenAndRiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */; };
 		C106240C1FB1889200500BDC /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = C106240B1FB1889100500BDC /* cat.png */; };
@@ -55,6 +56,12 @@
 /* Begin PBXFileReference section */
 		089665337AA6046342A3C31C /* Pods-ChickenAndRice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice.debug.xcconfig"; sourceTree = "<group>"; };
 		16106BE72E0E8D7B3D53CBCE /* Pods-ChickenAndRiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		3F18309A1FDB7D9B00734FFA /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		3F18309B1FDB7D9B00734FFA /* cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cake.jpg; sourceTree = "<group>"; };
+		3F18309C1FDB7D9B00734FFA /* jiggly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiggly.png; sourceTree = "<group>"; };
+		3F18309D1FDB7D9C00734FFA /* agumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agumon.png; sourceTree = "<group>"; };
+		3F18309E1FDB7D9C00734FFA /* beyblade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beyblade.jpg; sourceTree = "<group>"; };
+		3F1830A11FDB7FFA00734FFA /* ViewController_IconSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_IconSelect.swift; sourceTree = "<group>"; };
 		4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C50E19765358C823871A59 /* Pods-ChickenAndRiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96D5571EBFF54366C53A9185 /* Pods-ChickenAndRiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -235,6 +242,11 @@
 				C106240B1FB1889100500BDC /* cat.png */,
 				C18CBA431FB1013E00E4ACF8 /* send_icon.png */,
 				C18CBA391FB092B400E4ACF8 /* chicken_and_rice.jpeg */,
+				3F18309D1FDB7D9C00734FFA /* agumon.png */,
+				3F18309E1FDB7D9C00734FFA /* beyblade.jpg */,
+				3F18309B1FDB7D9B00734FFA /* cake.jpg */,
+				3F18309A1FDB7D9B00734FFA /* chicken.png */,
+				3F18309C1FDB7D9B00734FFA /* jiggly.png */,
 			);
 			path = Art;
 			sourceTree = "<group>";
@@ -247,6 +259,7 @@
 				C1AC091B1FB7C5D2001DF319 /* ViewController_RegisterUser.swift */,
 				C1AC09221FB88DDC001DF319 /* ViewController_ChannelSelect.swift */,
 				C1D789AE1FB915F60074AB46 /* ViewController_ServerSelect.swift */,
+				3F1830A11FDB7FFA00734FFA /* ViewController_IconSelect.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -582,6 +595,7 @@
 				C18CBA041FB04FCB00E4ACF8 /* AppDelegate.swift in Sources */,
 				C1D789B31FB91B3C0074AB46 /* Model_Server.swift in Sources */,
 				C1D789AF1FB915F60074AB46 /* ViewController_ServerSelect.swift in Sources */,
+				3F1830A21FDB7FFA00734FFA /* ViewController_IconSelect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

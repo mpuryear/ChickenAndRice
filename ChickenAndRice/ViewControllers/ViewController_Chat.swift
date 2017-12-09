@@ -83,7 +83,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
 
         // This simply allows us to cycle through our images in ./Art
         var image : UIImage
-        
+        /*
         let string0 = "cat"
         let string1 = "send_icon"
         let string2 = "chicken_and_rice"
@@ -119,6 +119,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
         // We will call this when the user actually selects a thumbnail, not just at the end of this func
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
+ */
         
     }
     

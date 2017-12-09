@@ -812,6 +812,11 @@ depends-member:
 - ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "row"]
 - !private ["s8SequenceP", "subscript"]
+- !private ["8SocketIO0A4DataP", "_getBuiltinLogicValue"]
+- !private ["8SocketIO0A4DataP", "append"]
+- !private ["8SocketIO0A4DataP", "count"]
+- ["8SocketIO0A4DataP", "init"]
+- !private ["8SocketIO0A4DataP", "subscript"]
 - !private ["14ChickenAndRice15SocketIOManagerC", "channelCreated"]
 - !private ["14ChickenAndRice15SocketIOManagerC", "createChannel"]
 - !private ["14ChickenAndRice15SocketIOManagerC", "failedToCreateChannel"]
@@ -1816,6 +1821,7 @@ depends-nominal:
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
 - "s8SequenceP"
+- "8SocketIO0A4DataP"
 - !private "14ChickenAndRice15SocketIOManagerC"
 - "SS"
 - "s14StringProtocolP"
@@ -1887,6 +1893,7 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/SocketIO.swiftmodule/x86_64.swiftmodule"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/Starscream.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
@@ -1903,5 +1910,11 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-umbrella.h"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/Socket.IO-Client-Swift-umbrella.h"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Headers/SocketIO-Swift.h"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Headers/Starscream-Swift.h"
 - "/Users/student/Desktop/FinalProject/ChickenAndRice/Pods/Starscream/zlib/module.modulemap"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Socket.IO-Client-Swift/SocketIO.framework/Modules/module.modulemap"
+- "/Users/student/Desktop/FinalProject/ChickenAndRice/DerivedData/Build/Products/Debug-iphonesimulator/Starscream/Starscream.framework/Modules/module.modulemap"
 interface-hash: "79aad25bad769f50066e102cc94671a6"
