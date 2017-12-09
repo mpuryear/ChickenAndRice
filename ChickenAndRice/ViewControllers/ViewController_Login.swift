@@ -175,7 +175,7 @@ class ViewController_Login: UIViewController {
             ViewController_Login.hasLoaded = true
  
         // Do any additional setup after loading the view, typically from a nib.
-   
+        self.view.backgroundColor = UIColor.lightGray
     }
     
     override func viewDidAppear(_ animated: Bool) {

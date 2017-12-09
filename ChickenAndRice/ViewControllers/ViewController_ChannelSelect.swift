@@ -20,7 +20,10 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         if newChannelTextField.text != "" {
         SocketIOManager.sharedInstance.createChannel(username: Model_User.current_user.username, channel_name: newChannelTextField.text!, server_id: Model_Server.current_server._id)
         } else {
-            // TODO alert, field cannot be empty
+            
+            let alert = UIAlertController(title: "Alert", message: "New channels must have a name ", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     var selectedLabel : String = ""
@@ -42,14 +45,31 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         
         
         SocketIOManager.sharedInstance.failedToCreateChannel(completionHandler: { () -> Void in
+            let alert = UIAlertController(title: "Alert", message: "Failed to create channel", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             
-            // TODO Alert user that this channel couldnt be created via UIALert
-            // see login view controller for example
             
         });
         // Do any additional setup after loading the view.
+        if Model_User.current_user.theme {
+            self.view.backgroundColor = UIColor.lightGray
+            newChannelTextField.backgroundColor = UIColor.white
+            self.view.backgroundColor = UIColor.lightGray
+            channelTableView.backgroundColor = UIColor.lightGray
+        } else {
+            self.view.backgroundColor = UIColor.darkGray
+            newChannelTextField.backgroundColor = UIColor.lightGray
+            self.view.backgroundColor = UIColor.darkGray
+            channelTableView.backgroundColor = UIColor.darkGray
+        }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -117,7 +137,16 @@ class ViewController_ChannelSelect: UIViewController,  UITableViewDataSource, UI
         
         let currentChannel = self.channels[indexPath.row]
         
-    
+        //Coloring text based on theme.
+        if Model_User.current_user.theme {
+            cell.channelName.textColor = UIColor.black
+            cell.backgroundColor = UIColor.lightGray
+            tableView.backgroundView?.backgroundColor = UIColor.lightGray
+        } else {
+            cell.channelName.textColor = UIColor.white
+            cell.backgroundColor = UIColor.darkGray
+            tableView.backgroundView?.backgroundColor = UIColor.darkGray
+        }
         // add our text to our views
         cell.channelName.text = currentChannel.name
         
