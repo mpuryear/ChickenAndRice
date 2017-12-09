@@ -10,6 +10,11 @@
 		3F1830A21FDB7FFA00734FFA /* ViewController_IconSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1830A11FDB7FFA00734FFA /* ViewController_IconSelect.swift */; };
 		8B67534C8F4158CF919D09D6 /* Pods_ChickenAndRiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */; };
 		9E3E2A8C6F7FCDB9AE9AADE0 /* Pods_ChickenAndRiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */; };
+		B103989F1FDBB6F40068B01E /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = B103989E1FDBB6F30068B01E /* chicken.png */; };
+		B10398A11FDBB7300068B01E /* jiggly.png in Resources */ = {isa = PBXBuildFile; fileRef = B10398A01FDBB7300068B01E /* jiggly.png */; };
+		B10398A31FDBB7380068B01E /* cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B10398A21FDBB7370068B01E /* cake.jpg */; };
+		B10398A51FDBB7440068B01E /* agumon.png in Resources */ = {isa = PBXBuildFile; fileRef = B10398A41FDBB7430068B01E /* agumon.png */; };
+		B10398A71FDBB74E0068B01E /* beyblade.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B10398A61FDBB74E0068B01E /* beyblade.jpg */; };
 		C106240C1FB1889200500BDC /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = C106240B1FB1889100500BDC /* cat.png */; };
 		C159955E1FB13A3D007E75AC /* TableViewCell_Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */; };
 		C15995601FB13CDB007E75AC /* Model_Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159955F1FB13CDB007E75AC /* Model_Message.swift */; };
@@ -56,17 +61,17 @@
 /* Begin PBXFileReference section */
 		089665337AA6046342A3C31C /* Pods-ChickenAndRice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRice/Pods-ChickenAndRice.debug.xcconfig"; sourceTree = "<group>"; };
 		16106BE72E0E8D7B3D53CBCE /* Pods-ChickenAndRiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests.release.xcconfig"; sourceTree = "<group>"; };
-		3F18309A1FDB7D9B00734FFA /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
-		3F18309B1FDB7D9B00734FFA /* cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cake.jpg; sourceTree = "<group>"; };
-		3F18309C1FDB7D9B00734FFA /* jiggly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiggly.png; sourceTree = "<group>"; };
-		3F18309D1FDB7D9C00734FFA /* agumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agumon.png; sourceTree = "<group>"; };
-		3F18309E1FDB7D9C00734FFA /* beyblade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beyblade.jpg; sourceTree = "<group>"; };
 		3F1830A11FDB7FFA00734FFA /* ViewController_IconSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_IconSelect.swift; sourceTree = "<group>"; };
 		4A25890D10844D4C136FC683 /* Pods_ChickenAndRiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C50E19765358C823871A59 /* Pods-ChickenAndRiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceTests/Pods-ChickenAndRiceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96D5571EBFF54366C53A9185 /* Pods-ChickenAndRiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9835CAFE76581DD39D11CE55 /* Pods_ChickenAndRiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChickenAndRiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F56DCED9A6F798A053C7587 /* Pods-ChickenAndRiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChickenAndRiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChickenAndRiceUITests/Pods-ChickenAndRiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B103989E1FDBB6F30068B01E /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		B10398A01FDBB7300068B01E /* jiggly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiggly.png; sourceTree = "<group>"; };
+		B10398A21FDBB7370068B01E /* cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cake.jpg; sourceTree = "<group>"; };
+		B10398A41FDBB7430068B01E /* agumon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agumon.png; sourceTree = "<group>"; };
+		B10398A61FDBB74E0068B01E /* beyblade.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beyblade.jpg; sourceTree = "<group>"; };
 		C106240B1FB1889100500BDC /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		C159955D1FB13A3D007E75AC /* TableViewCell_Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell_Chat.swift; sourceTree = "<group>"; };
 		C159955F1FB13CDB007E75AC /* Model_Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model_Message.swift; sourceTree = "<group>"; };
@@ -242,11 +247,11 @@
 				C106240B1FB1889100500BDC /* cat.png */,
 				C18CBA431FB1013E00E4ACF8 /* send_icon.png */,
 				C18CBA391FB092B400E4ACF8 /* chicken_and_rice.jpeg */,
-				3F18309D1FDB7D9C00734FFA /* agumon.png */,
-				3F18309E1FDB7D9C00734FFA /* beyblade.jpg */,
-				3F18309B1FDB7D9B00734FFA /* cake.jpg */,
-				3F18309A1FDB7D9B00734FFA /* chicken.png */,
-				3F18309C1FDB7D9B00734FFA /* jiggly.png */,
+				B103989E1FDBB6F30068B01E /* chicken.png */,
+				B10398A01FDBB7300068B01E /* jiggly.png */,
+				B10398A21FDBB7370068B01E /* cake.jpg */,
+				B10398A41FDBB7430068B01E /* agumon.png */,
+				B10398A61FDBB74E0068B01E /* beyblade.jpg */,
 			);
 			path = Art;
 			sourceTree = "<group>";
@@ -398,12 +403,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10398A51FDBB7440068B01E /* agumon.png in Resources */,
 				C106240C1FB1889200500BDC /* cat.png in Resources */,
+				B10398A31FDBB7380068B01E /* cake.jpg in Resources */,
+				B10398A71FDBB74E0068B01E /* beyblade.jpg in Resources */,
 				C18CBA441FB1013F00E4ACF8 /* send_icon.png in Resources */,
 				C18CBA0E1FB04FCB00E4ACF8 /* LaunchScreen.storyboard in Resources */,
+				B103989F1FDBB6F40068B01E /* chicken.png in Resources */,
 				C1789B231FB39336002ADAAF /* rooster-1.wav in Resources */,
 				C18CBA0B1FB04FCB00E4ACF8 /* Assets.xcassets in Resources */,
 				C18CBA3A1FB0934C00E4ACF8 /* chicken_and_rice.jpeg in Resources */,
+				B10398A11FDBB7300068B01E /* jiggly.png in Resources */,
 				C18CBA091FB04FCB00E4ACF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

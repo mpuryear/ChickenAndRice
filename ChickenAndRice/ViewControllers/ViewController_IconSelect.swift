@@ -73,7 +73,7 @@ class ViewController_IconSelect: UIViewController {
         print("got to the end of chicken and rice")
     }
     @IBAction func didTapChicken(_ sender: Any) {
-        print("didTapSendIcon")
+        print("didTapChicken")
         var image : UIImage
         let path = Bundle.main.path(forResource: "chicken", ofType: "png")
         
@@ -180,7 +180,8 @@ class ViewController_IconSelect: UIViewController {
         
         Chicken_and_riceButton.setTitle("", for: .normal)
         Chicken_and_riceButton.setBackgroundImage(image3, for: .normal)
-        //button 4
+        
+        //image 4
         var image4 : UIImage
         image4 = UIImage(imageLiteralResourceName: "chicken" + ".png")
         image4 = resizeImage(image: image4, targetSize: CGSize(width: 32, height: 32))
@@ -219,9 +220,7 @@ class ViewController_IconSelect: UIViewController {
         
         beybladeButton.setTitle("", for: .normal)
         beybladeButton.setBackgroundImage(image8, for: .normal)
-
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
