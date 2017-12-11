@@ -208,8 +208,8 @@ class SocketIOManager : NSObject {
                     
                     let thumbnail_dict = thumbnail_tuple["data"] as! NSDictionary
                     
-                    print(thumbnail_dict["data"] as Any)
-                    print((thumbnail_dict["data"] as! Array<Int>).count)
+                    //print(thumbnail_dict["data"] as Any)
+                    //print((thumbnail_dict["data"] as! Array<Int>).count)
                     
                     let bytes = thumbnail_dict["data"] as! [UInt8]
                     let thumbnail = NSData(bytes: bytes, length: bytes.count)

@@ -19,8 +19,9 @@ class ViewController_RegisterUser: UIViewController {
                 
         // check for username/password is empty and display an alert if so
         if usernameTextField!.text == "" || passwordTextField!.text == "" {
-            // TODO add UIAlertController, see viewController_Login
-            // cannot have empty fields
+            let alert = UIAlertController(title: "Alert", message: "Must input username and password", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         } else {
             SocketIOManager.sharedInstance.attemptRegisterUser(username: usernameTextField.text!, password: passwordTextField.text!)
         }
@@ -30,7 +31,9 @@ class ViewController_RegisterUser: UIViewController {
     func registerUserHandler() {
         SocketIOManager.sharedInstance.username_taken(completionHandler: {
            () -> Void in
-            // TODO add UIAlertController for taken username, see viewController_Login
+            let alert = UIAlertController(title: "Alert", message: "username is already taken", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         })
         
         SocketIOManager.sharedInstance.user_created(completionHandler: {

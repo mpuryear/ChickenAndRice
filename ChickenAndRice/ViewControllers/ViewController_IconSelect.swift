@@ -159,6 +159,12 @@ class ViewController_IconSelect: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if Model_User.current_user.theme {
+            self.view.backgroundColor = UIColor.lightGray
+        } else {
+            self.view.backgroundColor = UIColor.darkGray
+        }
+        
         // image 1
         var image1 : UIImage
         image1 = UIImage(imageLiteralResourceName: "cat" + ".png")
