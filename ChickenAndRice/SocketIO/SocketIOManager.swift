@@ -21,9 +21,6 @@ class SocketIOManager : NSObject {
     
     override init() {
         hasDisconnected = true
-        
-
-        
         super.init()
     }
     
@@ -91,15 +88,6 @@ class SocketIOManager : NSObject {
         }
     }
     
-    /*
-    func reconnectAttemptHandle(completionHandler: @ escaping() -> Void) {
-        socket.on("reconnectAttempt") {
-            data, ack in
-            completionHandler()
-        }
-        
-    }
-    */
     func disconnectHandler(completionHandler: @escaping () -> Void) {
     
         socket.on("disconnect"){
@@ -203,21 +191,20 @@ class SocketIOManager : NSObject {
                     currentMessage.dateTime = dateTime
                     currentMessage.message = message
                     currentMessage.username = username
-                    
+                 
+                    // Extract from our array of dictionaries
                     if let thumbnail_tuple = i["thumbnail"] as? [String: AnyObject] {
-                    
+                        
+                    // convert the data portion of our dictionary into another dictionary
                     let thumbnail_dict = thumbnail_tuple["data"] as! NSDictionary
                     
-                    print(thumbnail_dict["data"] as Any)
-                    print((thumbnail_dict["data"] as! Array<Int>).count)
-                    
+                    // extract the bytes from our data from server
                     let bytes = thumbnail_dict["data"] as! [UInt8]
+                  
+                    // convert our thumbnail into the swift NSData object
                     let thumbnail = NSData(bytes: bytes, length: bytes.count)
-                    // let receivedData = thumbnail_dict["data"] as! NSData
-                    
-                    
-                    
-                    // only add our unique thumbnail if our user has one
+                        
+                    // Convert the newly parsed NSData into our thumbnails datatype
                     currentMessage.thumbnail = thumbnail as Data
                     }
                     messages.append(currentMessage)

@@ -17,6 +17,9 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
     
     @IBOutlet weak var serverTableView: UITableView!
     
+    @IBOutlet weak var shareableStringTextView: UITextView!
+    
+    
     @IBOutlet weak var inputTextField: UITextField!
     var selectedLabel : String = ""
   
@@ -99,6 +102,8 @@ class ViewController_ServerSelect: UIViewController,  UITableViewDataSource, UIT
            
         })
         // Do any additional setup after loading the view.
+        
+        shareableStringTextView.text = Model_Server.current_server.shareableLink
     }
     
     override func didReceiveMemoryWarning() {

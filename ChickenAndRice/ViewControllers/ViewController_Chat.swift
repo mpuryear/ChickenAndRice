@@ -51,7 +51,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func didTapThumbnail(_ sender: Any) {
         
         print("didTapThumbnail")
-
+/*
         // TODO:  implement gallery image picker
         // http://www.codingexplorer.com/choosing-images-with-uiimagepickercontroller-in-swift/
         
@@ -60,6 +60,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         // This simply allows us to cycle through our images in ./Art
         var image : UIImage
         
+        let image_count = 3
         let string0 = "cat"
         let string1 = "send_icon"
         let string2 = "chicken_and_rice"
@@ -79,14 +80,13 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         default: thumbnail = (NSData.init(contentsOfFile: path0!) as Data?)!
         image = UIImage(imageLiteralResourceName: string0 + ".png")
         }
-        thmbIdx = (thmbIdx + 1) % 3
+        thmbIdx = (thmbIdx + 1) % image_count
         print("thmbIdx \(thmbIdx)")
         
-
+        // see resizeImage in this file.
         image = resizeImage(image: image, targetSize: CGSize(width: 32, height: 32))
         
         thumbnailButton.setTitle("", for: .normal)
-//        thumbnailButton.setImage(image, for: .normal)
         thumbnailButton.setBackgroundImage(image, for: .normal)
 
         
@@ -95,7 +95,8 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
         // We will call this when the user actually selects a thumbnail, not just at the end of this func
         SocketIOManager.sharedInstance.changeUserThumbnail(username: Model_User.current_user.username, thumbnail: thumbnail)
-        
+ 
+ */
     }
     
     @IBAction func didTapSend(_ sender: Any) {
@@ -223,7 +224,8 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     
     func establishChannelJoinMessageHandling() {
         SocketIOManager.sharedInstance.getChatMessagesForChannel(completionHandler: {
-            (channelMessages) -> Void in
+            (channelMessages) -> Void in DispatchQueue.main.async{
+                () -> Void in
             self.messageModel = channelMessages
             self.chatTableView.reloadData()
 
@@ -231,6 +233,7 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
                 // scroll to bottom of the tableview but only if we have something to scroll to
                 let indexPath = NSIndexPath(row: self.messageModel.count - 1, section: 0)
                 self.chatTableView.scrollToRow(at: indexPath as IndexPath, at: .bottom, animated: false)
+            }
             }
         })
     }
@@ -244,12 +247,14 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         
         chatTableView.rowHeight = UITableViewAutomaticDimension
         chatTableView.estimatedRowHeight = 44
-        chatTableView.separatorStyle = .none   
+        chatTableView.separatorStyle = .none
 
+        
     
         // TODO : THEMES
         if Model_User.current_user.theme {
             // white bg black text
+            
             
         } else {
             // dark theme. black bg white text
@@ -269,8 +274,6 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         SocketIOManager.sharedInstance.subscribeToServer(username: Model_User.current_user.username, connect_string: "general")
         Model_Channel.current_channel._id = "5a06f87aa551eb6a1c6b9057" // default channel id
         
-        
-        //SocketIOManager.sharedInstance.requestSubscribedServers(username: Model_User.current_user.username)
    
         
         ViewController_Chat.hasLoaded = true
@@ -280,17 +283,10 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         print("view appeared: chat : model channel current name: \(Model_Channel.current_channel.name)")
     
-        serverSelectButton.setTitle(Model_Server.current_server.name, for: .normal)
-        channelSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
+      //  serverSelectButton.setTitle(Model_Server.current_server.name, for: .normal)
+       // channelSelectButton.setTitle(Model_Channel.current_channel.name, for: .normal)
 
-        shareableStringTextView.text = Model_Server.current_server.shareableLink
-  
-        
-        // requeest messages for current channel.
-       //curre SocketIOManager.sharedInstance.requestChannelsOfServer(username: Model_User.current_user.username, server_id: Model_Server.current_server._id)
-        
-        
-        
+     
         SocketIOManager.sharedInstance.requestMessagesByChannelId(username: Model_User.current_user.username, channel_id: Model_Channel.current_channel._id)
     }
     
@@ -364,6 +360,10 @@ class ViewController_Chat: UIViewController, UITableViewDataSource, UITableViewD
         cell.thumbnail.image = UIImage(data: currentMessage.thumbnail!)
         cell.thumbnail.image = resizeImage(image: cell.thumbnail.image!, targetSize: CGSize(width: 32, height: 32))
         
+        
+      //  textView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
+        
+      
         
         return cell
     }
